@@ -2,13 +2,13 @@
     --accent-color: #ee313c;
 }
 
-html, body, div, ul {
+html, body, div, ul, p, h1, h2, h3, h4, h5 {
     margin: 0px;
     padding: 0px;
-    font-family: 'Poppins', sans-serif;
 }
 
 html, body {
+    font-family: 'Poppins', sans-serif;
     font-size: 12p;
 }
 
@@ -31,7 +31,9 @@ ul li {
     display: inline;
 }
 
-.card-filter ul {
+.card-filter {
+    display: flex;
+    flex-wrap: wrap;
     padding: 25px 0px;
 }
 
@@ -76,55 +78,50 @@ ul li {
     padding: 0px 10%;
 }
 
-input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-
-input[type="checkbox"]+span {
+.checkbox {
     font-size: .75rem;
-    color: #000;
-}
-
-input[type="checkbox"]+span:before {
-    content: '';
-    background-color: white;
-    border: solid 2px rgba(255, 255, 255, .25);
-    border-radius: 50%;
-    margin-right: .5rem;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-}
-
-input[type="checkbox"]:checked+span:before {
-    content: '';
-    background-color: #3FB865;
-    border: solid 2px white;
-    border-radius: 50%;
-    margin-right: .5rem;
-    width: 24px;
-    height: 24px;
-}
-
-input[type="checkbox"]:focus+span:before {
-}
-
-input[type="checkbox"]:disabled+span {
-    color: #999;
-}
-
-input[type="checkbox"]:not(:disabled)+span:hover:before {
-    text-shadow: 0 1px 2px #77F;
-}
-
-.checkbox-text {
+    font-weight: 600;
+    width: fit-content;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    border-radius: 64px;
+    height: 1.5rem;
+    padding-left: 2px;
+    padding-right: 12px;
+    margin-right: 16px;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.checkbox-circle {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 64px;
+    margin-right: 8px;
+}
+
+.checked {
     background-color: #3FB865;
-    width: fit-content;
-    padding: .25rem 1rem .25rem .25rem;
-    margin: 10px;
-    border-radius: 1.75rem;
+    color: white;
+    border: 2px solid #3FB865;
+}
+
+.checkmark {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    width: .25rem;
+    height: .5rem;
+    transform: rotate(45deg);
+    margin: auto;
+    margin-bottom: .275rem;
+}
+
+.checked .checkbox-circle {
+    border-color: white;
+    background-color: #3FB865;
+    display: flex;
+    align-items: center;
 }
