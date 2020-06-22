@@ -1,59 +1,40 @@
-var categories = [
-    "3d",
-    "animation",
-    "rendering",
-    "interaction_design",
-    "corporate_communication",
-    "photography",
-    "video",
-    "games_videogames",
-    "user_interface"
-];
+var cardsAmount = $(".card").length;
+var cardContainerWidth = $(".cards").width();
+var cardWidth = $(".card").width() + 2;
+var remainingSpace = ((cardContainerWidth / cardWidth) % 1) * cardWidth;
+var cardsPerRow = (cardContainerWidth / cardWidth) - ((cardContainerWidth / cardWidth) % 1);
+var cardMargin = remainingSpace / (cardsPerRow - 1);
 
-// [0] EN; [1] IT;
-var translations = [
-    ["3D", "3D"],
-    ["Animation", "Animazione"],
-    ["Rendering", "Rendering"],
-    ["Interaction Design", "Interaction Design"],
-    ["Corporate Communication", "Comunicazione Aziendale"],
-    ["Photography", "Fotografia"],
-    ["Video", "Video"],
-    ["Games & Videogames", "Giochi & Videogiochi"],
-    ["User Interface", "User Interface"]
-];
+if (cardMargin < 16) {
+    remainingSpace += cardWidth;
+    cardsPerRow--;
+    cardMargin = remainingSpace / (cardsPerRow - 1);
+}
 
-generateCardFilter(categories);
+console.log("cardsAmount " + cardsAmount);
+console.log("cardContainerWidth " + cardContainerWidth);
+console.log("cardWidth " + cardWidth);
+console.log("remainingSpace " + remainingSpace);
+console.log("cardsPerRow " + cardsPerRow);
+console.log("cardMargin " + cardMargin);
+
+
+$(".card").each(function(index) {
+    if ((index + 1) % (cardsPerRow) != 0) {
+        $(this).css("margin-right", cardMargin + "px");
+    }
+});
+
 
 function updateCardsVisibility(id) {
     console.log("click on checkbox " + id);
 
-    $("#" + categories[id]).toggleClass("checked");
-}
+    $("#" + id).toggleClass("checked");
 
-function generateCardFilter(categories) {
-    for (var i = 0; i < categories.length; i++) {
-        var mainNode = document.createElement("div");
-        var checkboxNode = document.createElement("div");
-        var checkmarkNode = document.createElement("div");
-        var checkboxLabel = document.createElement("div");
-        var pNode = document.createElement("p");
-        var textNode = document.createTextNode(translations[i][0]);
+    $(".card").each(function() {
+        if ($(this).hasClass(id)) {
+            $(this).toggleClass("hiddenCard");
+        }
+    });
 
-        mainNode.setAttribute("class", "checkbox " + categories[i] + " checked");
-        mainNode.setAttribute("id", categories[i]);
-        mainNode.setAttribute("onClick", "updateCardsVisibility(" + i + ")");
-        checkboxNode.setAttribute("class", "checkbox-circle");
-        checkmarkNode.setAttribute("class", "checkmark");
-        checkboxLabel.setAttribute("class", "checkbox-label");
-
-        checkboxNode.appendChild(checkmarkNode);
-        pNode.appendChild(textNode);
-        checkboxLabel.appendChild(pNode);
-
-        mainNode.appendChild(checkboxNode);
-        mainNode.appendChild(checkboxLabel);
-
-        document.getElementById("card-filter").appendChild(mainNode);
-    }
 }

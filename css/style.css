@@ -55,9 +55,7 @@ ul li {
 
 .cards {
     display: flex;
-    flex-wrap: wrap;
-    padding: 0px 10%;
-    justify-content: space-between;
+    flex-flow: row wrap;
 }
 
 .card {
@@ -124,4 +122,9 @@ ul li {
     background-color: #3FB865;
     display: flex;
     align-items: center;
+}
+
+.hiddenCard {
+    background-color: red;
+    display: none;
 }
