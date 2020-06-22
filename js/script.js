@@ -32,12 +32,12 @@ function updateCardsVisibility(id) {
 function updateCardMargins(n) {
     cardsAmount = n;
     cardContainerWidth = $(".cards").width();
-    cardWidth = 225 + 2;
+    cardWidth = 225;
     remainingSpace = ((cardContainerWidth / cardWidth) % 1) * cardWidth;
     cardsPerRow = (cardContainerWidth / cardWidth) - ((cardContainerWidth / cardWidth) % 1);
     cardMargin = remainingSpace / (cardsPerRow - 1);
 
-    if (cardMargin < 0) {
+    if (cardMargin < 32) {
         remainingSpace += cardWidth;
         cardsPerRow--;
         cardMargin = remainingSpace / (cardsPerRow - 1);
