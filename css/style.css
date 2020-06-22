@@ -1,0 +1,130 @@
+:root {
+    --accent-color: #ee313c;
+}
+
+html, body, div, ul {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    font-size: 12p;
+}
+
+.cover {
+    background-color: lightblue;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.cover-items {
+    width: 100%;
+}
+
+.cover-text {
+    padding: 0px 5%;
+}
+
+ul li {
+    display: inline;
+}
+
+.card-filter ul {
+    padding: 25px 0px;
+}
+
+.navbar {
+    padding: 0px 10%;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, .25);
+}
+
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-list li {
+    padding: 10px 48px 10px 0px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 10%;
+    justify-content: space-between;
+}
+
+.card {
+    width: 225px;
+    height: 325px;
+    border-radius: 10px;
+    background-color: white;
+    transition: filter 0.25s ease-in;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    filter: drop-shadow(0px 0px 32px rgba(0, 0, 0, 0.25));
+    transition: filter 0.25s ease-out;
+}
+
+#portfolio {
+    padding: 0px 10%;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+input[type="checkbox"]+span {
+    font-size: .75rem;
+    color: #000;
+}
+
+input[type="checkbox"]+span:before {
+    content: '';
+    background-color: white;
+    border: solid 2px rgba(255, 255, 255, .25);
+    border-radius: 50%;
+    margin-right: .5rem;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+input[type="checkbox"]:checked+span:before {
+    content: '';
+    background-color: #3FB865;
+    border: solid 2px white;
+    border-radius: 50%;
+    margin-right: .5rem;
+    width: 24px;
+    height: 24px;
+}
+
+input[type="checkbox"]:focus+span:before {
+}
+
+input[type="checkbox"]:disabled+span {
+    color: #999;
+}
+
+input[type="checkbox"]:not(:disabled)+span:hover:before {
+    text-shadow: 0 1px 2px #77F;
+}
+
+.checkbox-text {
+    display: flex;
+    align-items: center;
+    background-color: #3FB865;
+    width: fit-content;
+    padding: .25rem 1rem .25rem .25rem;
+    margin: 10px;
+    border-radius: 1.75rem;
+}
