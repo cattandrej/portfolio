@@ -281,3 +281,8 @@ ul li {
 .project-description {
     width: 50%;
 }
+
+.medusa {
+    background-image: url("../res/projects/medusa_00.jpg");
+    background-position-x: 33%;
+}
