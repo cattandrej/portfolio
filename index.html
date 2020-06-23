@@ -29,14 +29,20 @@
             <div class="cover-text">
                 <h1>Andrej Cattaneo</h1>
                 <p>Communication Designer</p>
+
+                <div class="page-title">
+                    <h2>Portfolio</h2>
+                </div>
             </div>
+
+
 
             <div class="navbar">
                 <ul class="navbar-list">
                     <li>Portfolio</li>
-                    <li>Curriculum</li>
-                    <li>About</li>
-                    <li>Contacts</li>
+                    <li><a href="/en/cv.html">Curriculum</a></li>
+                    <li><a href="/en/about.html">About</a></li>
+                    <li><a href="/en/contacts.html">Contacts</a></li>
                 </ul>
             </div>
         </div>
@@ -102,7 +108,8 @@
                     <p>Graphic Design</p>
                 </div>
             </div>
-            <div class="checkbox photography checked" id="photography" onclick="updateCardsVisibility(event, 'photography')">
+            <div class="checkbox photography checked" id="photography"
+                onclick="updateCardsVisibility(event, 'photography')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
@@ -138,26 +145,30 @@
             </div>
         </div>
     </div>
-    
+
     <div id="portfolio">
 
         <div class="cards">
             <!-- CARD: MEDUSA LAMP -->
-            <div class="card interaction_design">
-                <div class="card-image">
-                    <img src="res/card_medusa.png">
-                </div>
+            <a href="/en/portfolio-page-template.html">
+                <div class="card interaction_design">
 
-                <div class="card-text">
-                    <div class="card-title">
-                        <p>Medusa lamp</p>
+                    <div class="card-image">
+                        <img src="res/card_medusa.png">
                     </div>
 
-                    <div class="card-tags">
-                        <p class="interaction_design p-tag tag-enabled">Interaction Design</p>
+                    <div class="card-text">
+                        <div class="card-title">
+                            <p>Medusa lamp</p>
+                        </div>
+
+                        <div class="card-tags">
+                            <p class="interaction_design p-tag tag-enabled">Interaction Design</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
+
             <!-- CARD: MONEYPHONE -->
             <div class="card interaction_design">
                 <div class="card-image">
@@ -427,6 +438,16 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="download-section">
+        <a>
+            <div class="button">
+
+                <p>Download the portfolio in PDF</p>
+
+            </div>
+        </a>
     </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

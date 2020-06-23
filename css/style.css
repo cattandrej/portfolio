@@ -2,13 +2,23 @@
     --accent-color: #ee313c;
 }
 
-html, body, div, ul, p, h1, h2, h3, h4, h5 {
+html, body, div, ul, p, a, h1, h2, h3, h4, h5 {
     margin: 0px;
     padding: 0px;
 }
 
+a, a:hover, a:visited {
+    color: inherit;
+    text-decoration: unset;
+}
+
 h1 {
-    font-weight: 600;
+font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 300;
 }
 
 html, body {
@@ -36,7 +46,12 @@ html, body {
 }
 
 .cover-text {
-    padding: 50px 10%;
+    padding: 50px 10% 0px;
+}
+
+.page-title {
+    padding-top: 25px;
+    width: 400px;
 }
 
 ul li {
@@ -52,8 +67,11 @@ ul li {
 .navbar {
     padding: 0px 10%;
     text-transform: uppercase;
-    background-color: rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, .0);
     backdrop-filter: blur(80px);
+    max-width: 100%;
+    overflow: hidden;
+    font-weight: 300;
 }
 
 .filters-bar p {
@@ -79,7 +97,7 @@ ul li {
 .card {
     width: 225px;
     height: 345px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: rgba(250, 250, 250, 1);
     transition: filter 0.25s ease-in;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -92,14 +110,14 @@ ul li {
 }
 
 .card:hover {
-    filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.33));
+    filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.25));
     transition: filter 0.25s ease-out;
 }
 
 .card-image {
     background-color: lightgrey;
     height: 250px;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -234,3 +252,32 @@ ul li {
     color: black;
 }
 
+.download-section {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0px;
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+.button {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border-radius: 64px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid black;
+}
+
+.button:hover {
+    color: white;
+    background-color: black;
+}
+
+.project-container {
+    padding: 50px 10%;
+}
+
+.project-description {
+    width: 50%;
+}
