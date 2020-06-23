@@ -276,6 +276,7 @@ ul li {
 
 .project-container {
     padding: 50px 10%;
+    display: flex;
 }
 
 .project-description {
@@ -285,4 +286,23 @@ ul li {
 .medusa {
     background-image: url("../res/projects/medusa_00.jpg");
     background-position-x: 33%;
+}
+
+.gallery {
+    padding-left: 50px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-photo {
+    width: 100%;
+    margin-bottom: 10px;
+    height: auto;
+    background-color: brown;
+}
+
+.img-fit {
+    width: 100%;
+    height: auto;
 }
