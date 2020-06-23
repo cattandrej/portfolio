@@ -34,15 +34,16 @@ $(window).resize(function () {
     updateCardMargins(cardsAmount);
 });
 
+
 function updateCardMargins(n) {
     cardsAmount = n;
-    cardContainerWidth = $(".cards").width();
+    cardContainerWidth = $(".cards").width() - 16;
     cardWidth = 225;
     remainingSpace = ((cardContainerWidth / cardWidth) % 1) * cardWidth;
     cardsPerRow = (cardContainerWidth / cardWidth) - ((cardContainerWidth / cardWidth) % 1);
     cardMargin = remainingSpace / (cardsPerRow - 1);
 
-    if (cardMargin < 32) {
+    if (cardMargin < 16) {
         remainingSpace += cardWidth;
         cardsPerRow--;
         cardMargin = remainingSpace / (cardsPerRow - 1);
@@ -74,19 +75,29 @@ function updateCardMargins(n) {
 // Card visibility
 //
 function updateCardsVisibility(event, id) {
-
-    if (event.shiftKey) {}
-
+    
     var cardCont = 0;
     console.log("click on checkbox " + id);
 
-    for (var i = 0; i < tags.length; i++) {
-        if (tags[i][0] === id) {
-            tags[i][1] = !tags[i][1];
+    if (event.shiftKey) {
+        for (var i = 0; i < tags.length; i++) {
+            if (tags[i][0] !== id) {
+                tags[i][1] = false;
+                $("#" + tags[i][0]).removeClass("checked");
+            } else {
+                tags[i][1] = true;
+                $("#" + tags[i][0]).addClass("checked");
+            }
         }
+    } else {
+        for (var i = 0; i < tags.length; i++) {
+            if (tags[i][0] === id) {
+                tags[i][1] = !tags[i][1];
+            }
+        }
+        $("#" + id).toggleClass("checked");
     }
 
-    $("#" + id).toggleClass("checked");
 
     // $(".card").each(function () {
     //     if ($(this).hasClass(id)) {
@@ -105,7 +116,6 @@ function updateCardsVisibility(event, id) {
     });
 
     $(".card").each(function () {
-
         var removedClasses = 0;
         $($(this)).find(".card-tags").children().each(function () {
             for (var i = 0; i < tags.length; i++) {

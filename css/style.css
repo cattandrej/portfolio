@@ -52,6 +52,10 @@ ul li {
     backdrop-filter: blur(80px);
 }
 
+.filters-bar p {
+    user-select: none; 
+}
+
 .navbar-list {
     list-style-type: none;
     display: flex;
