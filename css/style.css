@@ -277,10 +277,12 @@ ul li {
 .project-container {
     padding: 50px 10%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .project-description {
     width: 50%;
+    margin-right: 50%;
 }
 
 .medusa {
@@ -289,15 +291,15 @@ ul li {
 }
 
 .gallery {
-    padding-left: 50px;
-    width: 50%;
+    padding-top: 50px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
 .gallery-photo {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 47.5%;
+    margin-right: 2.5%;
     height: auto;
     background-color: brown;
 }
