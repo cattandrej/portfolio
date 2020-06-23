@@ -51,7 +51,7 @@ html, body {
 
 .page-title {
     padding-top: 25px;
-    width: 400px;
+    max-width: 400px;
 }
 
 ul li {
@@ -85,7 +85,7 @@ ul li {
 }
 
 .navbar-list li {
-    padding: 10px 48px 10px 0px;
+    padding: 10px 32px 10px 0px;
 }
 
 .cards {
@@ -306,3 +306,22 @@ ul li {
     width: 100%;
     height: auto;
 }
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 50%;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 100%;
+    }
+  }
+
+  .animate-in {
+    animation: .25s ease 0s 1 slideInFromBottom;
+  }
+
+  .navbar-list li:hover {
+      text-decoration: underline;
+  }
