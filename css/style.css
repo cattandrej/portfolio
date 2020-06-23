@@ -7,6 +7,10 @@ html, body, div, ul, p, h1, h2, h3, h4, h5 {
     padding: 0px;
 }
 
+h1 {
+    font-weight: 600;
+}
+
 html, body {
     font-family: 'Poppins', sans-serif;
     font-size: 12p;
@@ -139,7 +143,7 @@ ul li {
     border-radius: 64px;
     height: 1.5rem;
     padding-left: 2px;
-    padding-right: 12px;
+    padding-right: 2px;
     margin-right: 16px;
     margin-bottom: 8px;
     color: rgba(0, 0, 0, 0.25);
@@ -160,7 +164,21 @@ ul li {
     border: 2px solid black;
 }
 
-.checkmark {
+.reset {
+    border-color: black;
+}
+
+.reset .checkmark {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    width: .25rem;
+    height: .5rem;
+    transform: rotate(45deg);
+    margin: auto;
+    margin-top: .1rem;
+}
+
+.checked .checkmark {
     border: solid white;
     border-width: 0 2px 2px 0;
     width: .25rem;
@@ -170,12 +188,27 @@ ul li {
     margin-bottom: .275rem;
 }
 
+.reset .checkbox-circle {
+    border-color: black;
+
+}
+
 .checked .checkbox-circle {
     border-color: white;
     background-color: black;
     display: flex;
     align-items: center;
 }
+
+.checkbox-label {
+    padding-right: 10px;
+}
+
+.checkbox-reset {
+    margin: 0px;
+}
+
+
 
 .hiddenCard {
     border-width: 0px;

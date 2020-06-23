@@ -79,25 +79,49 @@ function updateCardsVisibility(event, id) {
     var cardCont = 0;
     console.log("click on checkbox " + id);
 
-    if (event.shiftKey) {
+    if (id === tags[0][0]) {
         for (var i = 0; i < tags.length; i++) {
-            if (tags[i][0] !== id) {
-                tags[i][1] = false;
-                $("#" + tags[i][0]).removeClass("checked");
-            } else {
-                tags[i][1] = true;
-                $("#" + tags[i][0]).addClass("checked");
-            }
+            tags[i][1] = true;
         }
     } else {
-        for (var i = 0; i < tags.length; i++) {
-            if (tags[i][0] === id) {
-                tags[i][1] = !tags[i][1];
+        if (event.shiftKey) {
+
+            for (var i = 0; i < tags.length; i++) {
+                if (tags[i][0] === id) {
+                    tags[i][1] = !tags[i][1];
+                }
+            }
+        } else {
+            for (var i = 0; i < tags.length; i++) {
+                if (tags[i][0] !== id) {
+                    tags[i][1] = false;
+                } else {
+                    tags[i][1] = true;
+                }
             }
         }
-        $("#" + id).toggleClass("checked");
     }
 
+    var allChecked = true;
+    for (var i = 1; i < tags.length; i++) {
+        if (!tags[i][1]) {
+            allChecked = false;
+        }
+    }
+    if (allChecked) {
+        tags[0][1] = true;
+    } else {
+        tags[0][1] = false;
+    }
+
+        for (var i = 0; i < tags.length; i++) {
+            if (tags[i][1]) {
+                $("#" + tags[i][0]).addClass("checked");
+            } else {
+                $("#" + tags[i][0]).removeClass("checked");
+
+            }
+        }
 
     // $(".card").each(function () {
     //     if ($(this).hasClass(id)) {
