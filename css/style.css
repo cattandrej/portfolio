@@ -72,6 +72,7 @@ ul li {
     max-width: 100%;
     overflow: hidden;
     font-weight: 300;
+    overflow-x:scroll;
 }
 
 .filters-bar p {
@@ -326,4 +327,17 @@ ul li {
 
   .navbar-list li:hover {
       text-decoration: underline;
+  }
+
+  @media screen and (max-width: 480px){
+    .project-description {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .gallery-photo {
+        width: 100%;
+        height: auto;
+        background-color: inherit;
+    }
   }
