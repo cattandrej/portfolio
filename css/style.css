@@ -79,10 +79,12 @@ ul li {
     overflow: hidden;
     box-sizing: border-box;
     margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
-    filter: drop-shadow(0px 0px 32px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.33));
     transition: filter 0.25s ease-out;
 }
 
@@ -95,6 +97,11 @@ ul li {
 
 .card-text {
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
 }
 
 .card-title {
@@ -102,8 +109,7 @@ ul li {
 }
 
 .card-tags {
-    font-size: .75rem;
-    color: rgba(0, 0, 0, 0.5)
+    font-size: .6rem;
 }
 
 #portfolio, .filters-bar {
@@ -145,9 +151,9 @@ ul li {
 }
 
 .checked {
-    background-color: #3FB865;
+    background-color: black;
     color: white;
-    border: 2px solid #3FB865;
+    border: 2px solid black;
 }
 
 .checkmark {
@@ -162,7 +168,7 @@ ul li {
 
 .checked .checkbox-circle {
     border-color: white;
-    background-color: #3FB865;
+    background-color: black;
     display: flex;
     align-items: center;
 }
@@ -173,5 +179,21 @@ ul li {
     margin: 0px !important;
     transition: ease .25s;
     opacity: 0%;
+}
+
+.p-tag{
+    display: inline-block;
+    padding: 0px .5rem;
+    border-radius: 16px;
+    border: 1px solid lightgray;
+    color: lightgray;
+    width: fit-content;
+    margin-bottom: 2px;
+}
+
+.tag-enabled {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
 }
 
