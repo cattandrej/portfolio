@@ -73,7 +73,10 @@ function updateCardMargins(n) {
 //
 // Card visibility
 //
-function updateCardsVisibility(id) {
+function updateCardsVisibility(event, id) {
+
+    if (event.shiftKey) {}
+
     var cardCont = 0;
     console.log("click on checkbox " + id);
 

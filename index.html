@@ -45,7 +45,7 @@
 
     <div class="filters-bar">
         <div class="card-filter" id="card-filter">
-            <div class="checkbox 3d checked" id="3d" onclick="updateCardsVisibility('3d')">
+            <div class="checkbox 3d checked" id="3d" onclick="updateCardsVisibility(event, '3d')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
@@ -53,7 +53,7 @@
                     <p>3D</p>
                 </div>
             </div>
-            <div class="checkbox animation checked" id="animation" onclick="updateCardsVisibility('animation')">
+            <div class="checkbox animation checked" id="animation" onclick="updateCardsVisibility(event, 'animation')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
@@ -61,7 +61,7 @@
                     <p>Animation</p>
                 </div>
             </div>
-            <div class="checkbox rendering checked" id="rendering" onclick="updateCardsVisibility('rendering')">
+            <div class="checkbox rendering checked" id="rendering" onclick="updateCardsVisibility(event, 'rendering')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="checkbox interaction_design checked" id="interaction_design"
-                onclick="updateCardsVisibility('interaction_design')">
+                onclick="updateCardsVisibility(event, 'interaction_design')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="checkbox corporate_communication checked" id="corporate_communication"
-                onclick="updateCardsVisibility('corporate_communication')">
+                onclick="updateCardsVisibility(event, 'corporate_communication')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
@@ -87,7 +87,16 @@
                     <p>Corporate Communication</p>
                 </div>
             </div>
-            <div class="checkbox photography checked" id="photography" onclick="updateCardsVisibility('photography')">
+            <div class="checkbox graphic_design checked" id="graphic_design"
+                onclick="updateCardsVisibility(event, 'graphic_design')">
+                <div class="checkbox-circle">
+                    <div class="checkmark"></div>
+                </div>
+                <div class="checkbox-label">
+                    <p>Graphic Design</p>
+                </div>
+            </div>
+            <div class="checkbox photography checked" id="photography" onclick="updateCardsVisibility(event, 'photography')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
@@ -95,7 +104,7 @@
                     <p>Photography</p>
                 </div>
             </div>
-            <div class="checkbox video checked" id="video" onclick="updateCardsVisibility('video')">
+            <div class="checkbox video checked" id="video" onclick="updateCardsVisibility(event, 'video')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
@@ -104,7 +113,7 @@
                 </div>
             </div>
             <div class="checkbox games_videogames checked" id="games_videogames"
-                onclick="updateCardsVisibility('games_videogames')">
+                onclick="updateCardsVisibility(event, 'games_videogames')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
@@ -113,12 +122,12 @@
                 </div>
             </div>
             <div class="checkbox user_interface checked" id="user_interface"
-                onclick="updateCardsVisibility('user_interface')">
+                onclick="updateCardsVisibility(event, 'user_interface')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
                 <div class="checkbox-label">
-                    <p>User Interface</p>
+                    <p>UX & UI</p>
                 </div>
             </div>
         </div>
@@ -189,8 +198,10 @@
                     </div>
 
                     <div class="card-tags">
-                        <p class="animation p-tag tag-enabled">Computer Animation</p>
                         <p class="3d p-tag tag-enabled">3D</p>
+                        <p class="animation p-tag tag-enabled">Computer Animation</p>
+                        <p class="rendering p-tag tag-enabled">Rendering</p>
+                        <p class="video p-tag tag-enabled">Video</p>
                     </div>
                 </div>
             </div>
@@ -242,6 +253,7 @@
                     </div>
 
                     <div class="card-tags">
+                        <p class="3d p-tag tag-enabled">3D</p>
                         <p class="games_videogames p-tag tag-enabled">Games & Videogames</p>
                     </div>
                 </div>
@@ -260,6 +272,7 @@
 
                     <div class="card-tags">
                         <p class="games_videogames p-tag tag-enabled">Games & Videogames</p>
+                        <p class="graphic_design p-tag tag-enabled">Graphic Design</p>
                     </div>
                 </div>
             </div>
@@ -276,7 +289,7 @@
                     </div>
 
                     <div class="card-tags">
-                        <p class="user_interface p-tag tag-enabled">User Interface</p>
+                        <p class="user_interface p-tag tag-enabled">UX & UI</p>
                     </div>
                 </div>
             </div>
@@ -293,7 +306,7 @@
                     </div>
 
                     <div class="card-tags">
-                        <p class="user_interface p-tag tag-enabled">User Interface</p>
+                        <p class="user_interface p-tag tag-enabled">UX & UI</p>
                     </div>
                 </div>
             </div>
@@ -311,6 +324,8 @@
 
                     <div class="card-tags">
                         <p class="corporate_communication p-tag tag-enabled">Corporate Communication</p>
+                        <p class="graphic_design p-tag tag-enabled">Graphic Design</p>
+
                     </div>
                 </div>
             </div>
@@ -328,6 +343,7 @@
 
                     <div class="card-tags">
                         <p class="corporate_communication p-tag tag-enabled">Corporate Communication</p>
+                        <p class="graphic_design p-tag tag-enabled">Graphic Design</p>
                     </div>
                 </div>
             </div>
