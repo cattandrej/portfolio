@@ -13,7 +13,7 @@ a, a:hover, a:visited {
 }
 
 h1 {
-font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 h2 {
@@ -31,7 +31,6 @@ html, body {
     color: white;
     height: 400px;
     display: flex;
-
     background-image: url("../res/cover.png");
     background-repeat: no-repeat;
     background-position: right;
@@ -72,11 +71,10 @@ ul li {
     max-width: 100%;
     overflow: hidden;
     font-weight: 300;
-    overflow-x:scroll;
 }
 
 .filters-bar p {
-    user-select: none; 
+    user-select: none;
 }
 
 .navbar-list {
@@ -209,7 +207,6 @@ ul li {
 
 .reset .checkbox-circle {
     border-color: black;
-
 }
 
 .checked .checkbox-circle {
@@ -227,8 +224,6 @@ ul li {
     margin: 0px;
 }
 
-
-
 .hiddenCard {
     border-width: 0px;
     width: 0px;
@@ -237,7 +232,7 @@ ul li {
     opacity: 0%;
 }
 
-.p-tag{
+.p-tag {
     display: inline-block;
     padding: 0px .5rem;
     border-radius: 16px;
@@ -286,8 +281,86 @@ ul li {
     margin-right: 50%;
 }
 
+.dark {
+    color: black;
+}
 .medusa {
     background-image: url("../res/projects/medusa_00.jpg");
+    background-position-x: 33%;
+}
+
+.moneyphone {
+    background-image: url("../res/projects/moneyphone_00.jpg");
+    background-position-x: 40%;
+}
+
+.pitybear {
+    background-image: url("../res/projects/pitybear_00.jpg");
+    background-position-x: 33%;
+}
+
+.volcano {
+    background-image: url("../res/projects/volcano_00.jpg");
+    background-position-x: 60%;
+}
+
+.deepfakelab {
+    background-image: url("../res/projects/deepfakelab_00.jpg");
+    background-position-x: 33%;
+}
+
+.solaris {
+    background-image: url("../res/projects/solaris_00.jpg");
+    background-position-x: 75%;
+}
+
+.strawberry {
+    background-image: url("../res/projects/strawberry_00.jpg");
+    background-position-x: 33%;
+}
+
+.ddoubled {
+    background-image: url("../res/projects/ddoubled_00.jpg");
+    background-position-x: 33%;
+}
+
+.monopoly {
+    background-image: url("../res/projects/monopoly_00.jpg");
+    background-position-x: 37.5%;
+}
+
+.metro_recorder {
+    background-image: url("../res/projects/metro_recorder_00.jpg");
+    background-position-x: 33%;
+}
+
+.rimac_stand {
+    background-image: url("../res/projects/rimac_stand_00.jpg");
+    background-position-x: 34%;
+}
+
+.rimac_brochures {
+    background-image: url("../res/projects/rimac_brochures_00.jpg");
+    background-position-x: 33%;
+}
+
+.rimac_photos {
+    background-image: url("../res/projects/rimac_photos_00.jpg");
+    background-position-x: 33%;
+}
+
+.rimac_video {
+    background-image: url("../res/projects/rimac_video_00.jpg");
+    background-position-x: 33%;
+}
+
+.olgiate_music_festiva {
+    background-image: url("../res/projects/olgiate_music_festiva_00.jpg");
+    background-position-x: 33%;
+}
+
+.leed {
+    background-image: url("../res/projects/leed00.jpg");
     background-position-x: 33%;
 }
 
@@ -301,8 +374,9 @@ ul li {
 .gallery-photo {
     width: 47.5%;
     margin-right: 2.5%;
+    margin-bottom: 15px;
     height: auto;
-    background-color: brown;
+    background-color: inherit;
 }
 
 .img-fit {
@@ -312,32 +386,40 @@ ul li {
 
 @keyframes slideInFromBottom {
     0% {
-      transform: translateY(100%);
-      opacity: 50%;
+        transform: translateY(100%);
+        opacity: 50%;
     }
     100% {
-      transform: translateX(0);
-      opacity: 100%;
+        transform: translateX(0);
+        opacity: 100%;
     }
-  }
+}
 
-  .animate-in {
+.animate-in {
     animation: .25s ease 0s 1 slideInFromBottom;
-  }
+}
 
-  .navbar-list li:hover {
-      text-decoration: underline;
-  }
+.navbar-list li:hover {
+    text-decoration: underline;
+}
 
-  @media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
+    .navbar {
+        overflow-x: scroll;
+    }
     .project-description {
         width: 100%;
         margin-right: 0px;
     }
-
     .gallery-photo {
         width: 100%;
         height: auto;
         background-color: inherit;
     }
-  }
+    .filters-bar {
+        margin-bottom: 5px;
+    }
+    .filters-bar {
+        padding: 0px 5%;
+    }
+}
