@@ -57,6 +57,10 @@ ul li {
     display: inline;
 }
 
+.list li {
+    display: block;
+}
+
 .card-filter {
     display: flex;
     flex-wrap: wrap;
@@ -365,7 +369,7 @@ ul li {
 }
 
 .gallery {
-    padding-top: 50px;
+    padding-top: 25px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
