@@ -399,12 +399,17 @@ ul li {
     font-size: .75rem;
     display: flex;
     justify-content: center;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(128, 128, 128, 1);
 }
 
 .love {
     text-align: center;
     padding: .5rem;
+}
+
+
+.red {
+    color: var(--accent-color);
 }
 
 @keyframes slideInFromBottom {
