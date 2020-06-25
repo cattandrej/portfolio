@@ -12,12 +12,14 @@ imgElements.shift();
 
 $('img').click(function () {
     console.log("click on " + $(this).attr("src"));
-    openPhotogallery(imgElements, $(this).attr("src"));
+    openGallery(imgElements, $(this).attr("src"));
 });
 
 
-function openPhotogallery(imgList, currentImage) {
+function openGallery(imgList, currentImage) {
     console.log("photogallery opened");
+    $("body").css("overflow","hidden");
+
     var index = 0;
     while (currentImage !== imgList[index][1]) {
         index++;
@@ -25,17 +27,19 @@ function openPhotogallery(imgList, currentImage) {
     currentImagePos = index;
     $(".photogallery img").attr("src", imgList[currentImagePos][1]);
     $(".photogallery").removeClass("hide");
+    updateLine();
 }
 
 function closeGallery() {
     $(".photogallery").addClass("hide");
+    $("body").css("overflow","visible");
 }
 
 $(document).keyup(function (e) {
 
     console.log(e.key);
     if (e.key === "Escape") { // escape key maps to keycode `27`
-        $(".photogallery").addClass("hide");
+        closeGallery();
     }
 
     if (!$(".photogallery").hasClass("hide")) {
@@ -47,6 +51,7 @@ $(document).keyup(function (e) {
             }
         }
     }
+    
 });
 
 // $(".photogallery-img").swiperight(function() {
@@ -64,6 +69,7 @@ function prevImg() {
         currentImagePos = imgElements.length - 1;
     }
     $(".photogallery img").attr("src", imgElements[currentImagePos][1]);
+    updateLine();
 }
 
 function nextImg() {
@@ -74,4 +80,9 @@ function nextImg() {
         currentImagePos = 0;
     }
     $(".photogallery img").attr("src", imgElements[currentImagePos][1]);
+    updateLine();
 }  
+
+function updateLine() {
+    $(".photogallery-line").css("width", ((window.innerWidth -  30) / (imgElements.length - 1)) * (currentImagePos));
+}

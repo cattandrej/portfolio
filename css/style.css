@@ -628,3 +628,15 @@ img {
  .project-description {
     padding-left: 5%;
  }
+
+ .photogallery-line {
+    display: flex;
+    position: fixed;
+    height: 3px;
+    background-color: rgba(196, 196, 196, .25);
+    bottom: 0px;
+    transition: width ease .25s;
+    min-width: 0px !important;
+    margin: 12px;
+    border-right: 6px solid rgba(255, 255, 255, .33);
+ }
