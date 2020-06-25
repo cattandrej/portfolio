@@ -15,6 +15,7 @@ $('img').click(function(){
     openPhotogallery(imgElements, $(this).attr("src"));       
  });
 
+
  function openPhotogallery(imgList, currentImage) {
      console.log("photogallery opened");
      var index = 0;

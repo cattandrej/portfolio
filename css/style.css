@@ -113,8 +113,59 @@ ul li {
     flex-direction: column;
 }
 
+.card:after {
+    content: "";
+    width: 224px;
+    height: 0px;
+    margin-top: calc(345px);
+    border-radius: 5px;
+    background-color: transparent;
+    transition: filter 0.25s ease-in;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: ease 5s;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    background-image: url("../res/go.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 224px;
+}
+
+.card:hover:after {
+    opacity: 1;
+    margin-top: 0px;
+    height: 345px;
+}
+
+.card:hover .card-title {
+    color: white;
+    z-index: 9999;
+    position: absolute;
+}
+.card:hover .card-tags {
+    height: 100%;
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.card:hover .card-tags p {
+    display: inline-block;
+    margin-right: 2.5px;
+    color: white;
+    background-color: transparent;
+    z-index: 9999;
+    border-color: white;
+
+}
+
 .card:hover {
-    filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.25));
     transition: filter 0.25s ease-out;
 }
 
