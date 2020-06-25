@@ -23,6 +23,26 @@
 </head>
 
 <body>
+    <div class="photogallery hide">
+        <div class="photogallery-topbar">
+            <div class="photogallery-close" onclick="closeGallery()" ></div>
+        </div>
+        <div class="photogallery-controls">
+            <div class="photogallery-back-arrow" onclick="prevImg()">
+                <div class="spacing"></div>
+                <div class="arrow left"></div>
+            </div>
+            <div class="photogallery-photo-frame">
+                <img class="photogallery-img" onclick="nextImg()">
+            </div>
+            <div class="photogallery-next-arrow" onclick="nextImg()">
+  
+                    <div class="spacing"></div>
+                    <div class="arrow right"></div>
+         
+            </div>
+        </div>
+    </div>
     <div class="cover medusa">
         <div class="cover-items">
             <div class="cover-text">
@@ -88,6 +108,12 @@
             <p>© Andrej Cattaneo 2020</p>
         </div>
     </div>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
 
+    <script src="../js/photogallery.js"></script>
+
+</body>
 </html>

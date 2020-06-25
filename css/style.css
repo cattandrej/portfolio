@@ -2,7 +2,7 @@
     --accent-color: #ee313c;
 }
 
-html, body, div, ul, p, a, h1, h2, h3, h4, h5 {
+html, body, div, ul, p, a, h1, h2, h3, h4, h5, img {
     margin: 0px;
     padding: 0px;
 }
@@ -377,7 +377,7 @@ ul li {
 }
 
 .gallery-photo {
-    max-width: 100%;
+    max-width: 47.5%;
     margin-right: 25px;
     margin-bottom: 15px;
     height: auto;
@@ -451,3 +451,119 @@ ul li {
         padding: 0px 5%;
     }
 }
+
+
+.photogallery {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+}
+
+.photogallery-controls {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.photogallery-photo-frame {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.photogallery-back-arrow, .photogallery-next-arrow {
+    width: 100px;
+    height: 25%;
+    cursor: pointer;
+}
+
+.photogallery-img {
+    margin: 0px 50px;
+    max-width: 100%;
+    height: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.spacing {
+    height: 33%;
+}
+
+
+.arrow {
+    border: solid rgb(96, 96, 96);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    margin: 25px;
+  }
+
+  .arrow:hover {
+    border-color: white;
+  }
+
+  .photogallery-back-arrow:hover .arrow, .photogallery-next-arrow:hover .arrow {
+    border-color: white;
+  }
+
+
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+
+  .photogallery-topbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+  }
+  .photogallery-close {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    width: 32px;
+    height: 32px;
+    padding: 16px;
+    position: relative;
+    cursor: pointer;
+}
+.photogallery-close:after {
+    content: '';
+    height: 32px;
+    border-left: 3px solid rgb(96, 96, 96);
+    position: absolute;
+    transform: rotate(45deg);
+    left: 24px;
+}
+
+.photogallery-close:before {
+    content: '';
+    height: 32px;
+    border-left: 3px solid rgb(96, 96, 96);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 24px;
+}
+
+.photogallery-close:hover:after, .photogallery-close:hover:before {
+    border-left: 3px solid white;
+}
+
+img {
+    cursor: pointer;
+}
+.photogallery-img {
+    cursor: auto;
+ }
