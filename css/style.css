@@ -120,26 +120,25 @@ ul li {
     margin-top: calc(345px);
     border-radius: 5px;
     background-color: transparent;
-    transition: filter 0.25s ease-in;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: ease 5s;
     overflow: hidden;
     box-sizing: border-box;
     margin-bottom: 32px;
     position: absolute;
     opacity: 0;
-    -webkit-transition: all .25s;
-    transition: all .25s;
     background-image: url("../res/go.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 224px;
+    transition: ease .25s;
 }
 
 .card:hover:after {
     opacity: 1;
     margin-top: 0px;
     height: 345px;
+    transition: ease .2;
+
 }
 
 .card:hover .card-title {
@@ -436,7 +435,7 @@ ul li {
 }
 
 .img-fit {
-    max-width: 100%;
+    max-width: calc(50% - 30px);
     max-height: 480px;
 }
 
@@ -482,26 +481,7 @@ ul li {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 480px) {
-    .navbar {
-        overflow-x: scroll;
-    }
-    .project-description {
-        width: 100%;
-        margin-right: 0px;
-    }
-    .gallery-photo {
-        width: 100%;
-        height: auto;
-        background-color: inherit;
-    }
-    .filters-bar {
-        margin-bottom: 5px;
-    }
-    .filters-bar {
-        padding: 0px 5%;
-    }
-}
+
 
 
 .photogallery {
@@ -640,3 +620,29 @@ img {
     margin: 12px;
     border-right: 6px solid rgba(255, 255, 255, .33);
  }
+
+ @media screen and (max-width: 480px) {
+    .navbar {
+        overflow-x: scroll;
+    }
+    .project-description {
+        width: 100%;
+        margin-right: 0px;
+    }
+    .gallery-photo {
+        width: 100%;
+        height: auto;
+        background-color: inherit;
+    }
+    .img-fit, .img-big {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    .filters-bar {
+        margin-bottom: 5px;
+    }
+    .filters-bar {
+        padding: 0px 5%;
+    }
+}
