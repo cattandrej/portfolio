@@ -10,31 +10,43 @@ $("img").each(function (i) {
 });
 imgElements.shift();
 
-$('img').click(function(){
+$('img').click(function () {
     console.log("click on " + $(this).attr("src"));
-    openPhotogallery(imgElements, $(this).attr("src"));       
- });
+    openPhotogallery(imgElements, $(this).attr("src"));
+});
 
 
- function openPhotogallery(imgList, currentImage) {
-     console.log("photogallery opened");
-     var index = 0;
-     while (currentImage !== imgList[index][1]) {
-         index++;
-     }
-     currentImagePos = index;
-     $(".photogallery img").attr("src", imgList[currentImagePos][1]);
-     $(".photogallery").removeClass("hide");
- }
+function openPhotogallery(imgList, currentImage) {
+    console.log("photogallery opened");
+    var index = 0;
+    while (currentImage !== imgList[index][1]) {
+        index++;
+    }
+    currentImagePos = index;
+    $(".photogallery img").attr("src", imgList[currentImagePos][1]);
+    $(".photogallery").removeClass("hide");
+}
 
- function closeGallery() {
+function closeGallery() {
     $(".photogallery").addClass("hide");
- }  
+}
 
- $(document).keyup(function(e) {
+$(document).keyup(function (e) {
+
+    console.log(e.key);
     if (e.key === "Escape") { // escape key maps to keycode `27`
-    $(".photogallery").addClass("hide");
-   }
+        $(".photogallery").addClass("hide");
+    }
+
+    if (!$(".photogallery").hasClass("hide")) {
+        if ((e.key === "ArrowLeft") || (e.key === "ArrowUp")) {
+            prevImg();
+        } else {
+            if ((e.key === "ArrowRight") || (e.key === "ArrowDown")) {
+                nextImg();
+            }
+        }
+    }
 });
 
 // $(".photogallery-img").swiperight(function() {
@@ -52,14 +64,14 @@ function prevImg() {
         currentImagePos = imgElements.length - 1;
     }
     $(".photogallery img").attr("src", imgElements[currentImagePos][1]);
-}  
+}
 
- function nextImg() {
-     console.log(imgElements);
-    if (currentImagePos < imgElements.length -1) {
+function nextImg() {
+    console.log(imgElements);
+    if (currentImagePos < imgElements.length - 1) {
         currentImagePos++;
     } else {
         currentImagePos = 0;
     }
     $(".photogallery img").attr("src", imgElements[currentImagePos][1]);
- }  
+}  
