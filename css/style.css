@@ -95,7 +95,6 @@ ul li {
 .cards {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
 }
 
 .card {
@@ -434,12 +433,17 @@ ul li {
     background-color: inherit;
 }
 
-.img-fit {
+.img-container-fit {
     max-width: calc(50% - 30px);
     max-height: 480px;
 }
 
-.img-big {
+.img-fit {
+    max-width: 100%;
+    max-height: 480px;
+}
+
+.img-big, .img-container-big {
     max-width: 100%;
     max-height: auto;
 }
@@ -622,21 +626,34 @@ img {
  }
 
  @media screen and (max-width: 480px) {
+     .cards {
+        justify-content: center;    
+     }
     .navbar {
         overflow-x: scroll;
+    }
+    .project-container {
+        padding: 30px 7.5px;
+    }
+    
+    #portfolio {
+        padding: 0px 7.5px;
     }
     .project-description {
         width: 100%;
         margin-right: 0px;
+        padding: 0px;
     }
     .gallery-photo {
         width: 100%;
         height: auto;
         background-color: inherit;
     }
-    .img-fit, .img-big {
+    .img-fit, .img-big, .img-container-big, .img-container-fit {
+        width: 100%;
         max-width: 100%;
         max-height: auto;
+        margin-right: 0px;
     }
 
     .filters-bar {
