@@ -427,14 +427,14 @@ ul li {
 
 .gallery-photo {
     max-width: 47.5%;
-    margin-right: 25px;
-    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     height: auto;
     background-color: inherit;
 }
 
 .img-container-fit {
-    max-width: calc(50% - 30px);
+    max-width: calc(50% - 40px);
     max-height: 480px;
 }
 
@@ -445,7 +445,7 @@ ul li {
 
 .img-big, .img-container-big {
     max-width: 100%;
-    max-height: auto;
+    max-height: 100%;
 }
 
 .minifooter {
@@ -484,9 +484,6 @@ ul li {
 .navbar-list li:hover {
     text-decoration: underline;
 }
-
-
-
 
 .photogallery {
     width: 100%;
@@ -652,7 +649,7 @@ img {
     .img-fit, .img-big, .img-container-big, .img-container-fit {
         width: 100%;
         max-width: 100%;
-        max-height: auto;
+        max-height: 100%;
         margin-right: 0px;
     }
 
