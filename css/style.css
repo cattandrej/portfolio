@@ -7,11 +7,11 @@ html, body, div, ul, p, a, h1, h2, h3, h4, h5, img {
     padding: 0px;
 }
 
-
 a, a:hover, a:visited {
     color: inherit;
     text-decoration: unset;
 }
+
 .a_text:hover {
     text-decoration: underline;
 }
@@ -140,7 +140,6 @@ ul li {
     margin-top: 0px;
     height: 345px;
     transition: ease .2;
-
 }
 
 .card:hover .card-title {
@@ -148,6 +147,7 @@ ul li {
     z-index: 9999;
     position: absolute;
 }
+
 .card:hover .card-tags {
     height: 100%;
     display: flex;
@@ -163,7 +163,6 @@ ul li {
     background-color: transparent;
     z-index: 9999;
     border-color: white;
-
 }
 
 .card:hover {
@@ -208,11 +207,11 @@ ul li {
 }
 
 .extra {
- background-color: none;
- width: 100%;
- display: flex;
- justify-content: center;
- flex-wrap: wrap;
+    background-color: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .align-left {
@@ -247,7 +246,6 @@ ul li {
 
 .external {
     background-image: url(../res/icon_external.svg);
-
 }
 
 .inline-external {
@@ -415,6 +413,7 @@ ul li {
 .dark {
     color: black;
 }
+
 .medusa {
     background-image: url("../res/projects/medusa_00.jpg");
     background-position-x: 33%;
@@ -547,7 +546,6 @@ ul li {
     padding: .5rem;
 }
 
-
 .red {
     color: var(--accent-color);
 }
@@ -592,7 +590,6 @@ ul li {
     justify-content: center;
 }
 
-
 .photogallery-back-arrow, .photogallery-next-arrow {
     width: 100px;
     height: 25%;
@@ -613,50 +610,50 @@ ul li {
     height: 33%;
 }
 
-
 .arrow {
     border: solid rgb(96, 96, 96);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 10px;
     margin: 25px;
-  }
+}
 
-  .arrow:hover {
+.arrow:hover {
     border-color: white;
-  }
+}
 
-  .photogallery-back-arrow:hover .arrow, .photogallery-next-arrow:hover .arrow {
+.photogallery-back-arrow:hover .arrow, .photogallery-next-arrow:hover .arrow {
     border-color: white;
-  }
+}
 
-
-  .right {
+.right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-  }
-  
-  .left {
+}
+
+.left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-  }
+}
 
-  .photogallery-topbar {
+.photogallery-topbar {
     display: flex;
     justify-content: flex-end;
     position: fixed;
     width: 100%;
-  }
-  .photogallery-close {
-      position: absolute;
-      right: 0px;
-      top: 0px;
+}
+
+.photogallery-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
     width: 32px;
     height: 32px;
     padding: 16px;
     position: relative;
     cursor: pointer;
 }
+
 .photogallery-close:after {
     content: '';
     height: 32px;
@@ -687,23 +684,24 @@ img {
 .gallery-video {
     display: block;
     border: none;
-    background-color:  #fcfbff;
+    background-color: #fcfbff;
 }
+
 .photogallery-img {
     cursor: auto;
- }
+}
 
- .highlight {
-     font-size: 1.5rem;
-     font-weight: 300;
-     padding-bottom: 25px;
- }
+.highlight {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-bottom: 25px;
+}
 
- .project-description {
+.project-description {
     padding-left: 5%;
- }
+}
 
- .photogallery-line {
+.photogallery-line {
     display: flex;
     position: fixed;
     height: 3px;
@@ -713,19 +711,60 @@ img {
     min-width: 0px !important;
     margin: 12px;
     border-right: 6px solid rgba(255, 255, 255, .33);
- }
+}
 
- @media screen and (max-width: 480px) {
-     .cards {
-        justify-content: center;    
-     }
+#curriculum {
+    margin: 0px 25%;
+    padding-top: 40px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.col-year {
+    width: 20%;
+    padding: 15px;
+}
+
+.year, .description-title {
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.col-description, .section-title {
+    width: 80%;
+    padding: 0px 15px;
+    margin: 15px 0px;
+}
+
+.col-description {
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.inline-row {
+
+    display: flex;
+    flex: 1 1 0px;
+}
+
+@media screen and (max-width: 480px) {
+    .cards {
+        justify-content: center;
+    }
     .navbar {
         overflow-x: scroll;
     }
     .project-container {
         padding: 30px 7.5px;
     }
-    
     #portfolio {
         max-width: 100%;
         padding: 0px 7.5px;
@@ -746,11 +785,13 @@ img {
         max-height: 100%;
         margin-right: 0px;
     }
-
     .filters-bar {
         margin-bottom: 5px;
     }
     .filters-bar {
         padding: 0px 5%;
+    }
+    .inline-row {
+        flex-wrap: wrap;
     }
 }
