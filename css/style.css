@@ -12,6 +12,9 @@ a, a:hover, a:visited {
     color: inherit;
     text-decoration: unset;
 }
+.a_text:hover {
+    text-decoration: underline;
+}
 
 h1 {
     font-size: 1.5rem;
@@ -224,6 +227,15 @@ ul li {
     filter: brightness(0);
 }
 
+.inline-icon {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .download {
     background-image: url(../res/icon_download.svg);
 }
@@ -231,6 +243,12 @@ ul li {
 .external {
     background-image: url(../res/icon_external.svg);
 
+}
+
+.inline-external {
+    background-image: url(../res/icon_inline_external.svg);
+    margin-left: 0px;
+    width: 8px;
 }
 
 .extra-card {
@@ -399,7 +417,7 @@ ul li {
 
 .moneyphone {
     background-image: url("../res/projects/moneyphone_00.jpg");
-    background-position-x: 40%;
+    background-position-x: 33%;
 }
 
 .pitybear {
