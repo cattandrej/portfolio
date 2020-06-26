@@ -25,7 +25,7 @@
 <body>
     <div class="photogallery hide">
         <div class="photogallery-topbar">
-            <div class="photogallery-close" onclick="closeGallery()" ></div>
+            <div class="photogallery-close" onclick="closeGallery()"></div>
         </div>
         <div class="photogallery-controls">
             <div class="photogallery-back-arrow" onclick="prevImg()">
@@ -36,14 +36,14 @@
                 <img class="photogallery-img" onclick="nextImg()">
             </div>
             <div class="photogallery-next-arrow" onclick="nextImg()">
-  
-                    <div class="spacing"></div>
-                    <div class="arrow right"></div>
-         
+
+                <div class="spacing"></div>
+                <div class="arrow right"></div>
+
             </div>
         </div>
         <div class="photogallery-line">
-            
+
         </div>
     </div>
     <div class="cover moneyphone dark">
@@ -72,13 +72,22 @@
     </div>
 
     <div class="project-container">
+
         <div class="project-description">
             <p class="highlight">
                 MoneyPhone nasce dalla volontà di dare nuova vita a oggetti vecchi o
                 non più utilizzati andando a ripensare la loro funzione originaria,
                 con il vincolo di mantenere invariata la forma con cui essi si presentano.
-                </p>
-                <p>
+            </p>
+        </div>
+        <div class="gallery">
+            <div class="gallery-photo img-container-big">
+                <iframe class="gallery-video" src="https://player.vimeo.com/video/222450930" title="MoneyPhone" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="project-description">
+            <p>
                 L’oggetto utilizzato da noi è un vecchio telefono a disco, opportunamente
                 modificato da permettere l’inserimento di monete. Esso le conta
                 e le conserva in un contenitore sottostante, non visibile all’utente.
@@ -123,8 +132,9 @@
                 </li>
                 <li> — Emettere tutto il credito o una quantità a scelta dell'utente.
                 </li>
-            </ul>          
+            </ul>
         </div>
+
         <div class="gallery">
             <div class="gallery-photo img-container-fit">
                 <img class="img-fit" src="../res/projects/moneyphone_01.jpg">
@@ -134,6 +144,41 @@
                 <img class="img-fit" src="../res/projects/moneyphone_02.jpg">
             </div>
         </div>
+
+        <div class="extra">
+            <a href="https://drive.google.com/uc?export=download&id=1KnsYoYHGZYZnV7eRI7X4wRQ0b04-EUXH">
+                <div class="extra-card">
+                    <div class="extra-icon download">
+
+                    </div>
+                    <p class="extra-text">
+                        Scarica il report del progetto
+                    </p>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=34VS2a6o--A" target="blank">
+                <div class="extra-card">
+                    <div class="extra-icon external">
+
+                    </div>
+                    <p class="extra-text">
+                        Extra: conteggio delle monete
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/watch?v=ga8irNEXdZ8" target="blank">
+                <div class="extra-card">
+                    <div class="extra-icon external">
+
+                    </div>
+                    <p class="extra-text">
+                        Extra: funzionamento del prelievo
+                    </p>
+                </div>
+            </a>
+        </div>
+
     </div>
     <div class="minifooter">
         <div class="love">
@@ -149,4 +194,5 @@
     <script src="../js/photogallery.js"></script>
 
 </body>
+
 </html>

@@ -2,6 +2,8 @@ var imgElements = [
 ];
 var currentImagePos = 0;
 
+onResize();
+
 $("img").each(function (i) {
     var imgElement = [
         i, $(this).attr("src")
@@ -86,3 +88,34 @@ function nextImg() {
 function updateLine() {
     $(".photogallery-line").css("width", ((window.innerWidth -  30) / (imgElements.length - 1)) * (currentImagePos));
 }
+
+function onResize() {
+    var w = window.innerWidth;
+
+    var x = 1200;
+    if (w > 480) {
+        x = w - (w * .2) - 34;
+    } else {
+        x = w - 32;
+    }
+
+
+
+    if (x > 1200) {
+        x = 1200;
+    }
+
+    var y = x * (9 / 16);
+
+    $("iframe").each(function(i) {
+        $(this).css("height", y + "px");
+        
+        if ($(this).hasClass("4_3")) {
+            $(this).css("width", y * (4 / 3) + "px");
+        } else {
+            $(this).css("width", x + "px");
+        }
+    });
+  }
+
+  window.addEventListener('resize', onResize);

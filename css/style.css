@@ -204,6 +204,60 @@ ul li {
     margin-bottom: 25px;
 }
 
+.extra {
+ background-color: none;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ 
+}
+
+.extra-icon {
+    width: 20px;
+    height: 100%;
+    background-color: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-right: 8px;
+    filter: brightness(0);
+}
+
+.download {
+    background-image: url(../res/icon_download.svg);
+}
+
+.external {
+    background-image: url(../res/icon_external.svg);
+
+}
+
+.extra-card {
+    cursor: pointer;
+    display: flex;
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid black;
+    height: 1.5rem;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+.extra-card:hover {
+    background-color: black;
+    color: white;
+}
+
+.extra-card:hover .extra-icon {
+    filter: brightness(1);
+}
+
 .checkbox {
     font-size: .75rem;
     font-weight: 600;
@@ -606,6 +660,12 @@ img {
     cursor: pointer;
     display: block;
 }
+
+.gallery-video {
+    display: block;
+    border: none;
+    background-color:  #fcfbff;
+}
 .photogallery-img {
     cursor: auto;
  }
@@ -644,6 +704,7 @@ img {
     }
     
     #portfolio {
+        max-width: 100%;
         padding: 0px 7.5px;
     }
     .project-description {
