@@ -9,7 +9,7 @@ $(".checkbox").each(function (index) {
 
     var temp = [
         "id_not_initialized",
-        true
+        false
     ];
 
     console.log($(this).attr("id"));
@@ -17,6 +17,7 @@ $(".checkbox").each(function (index) {
 
     tags.push(temp);
 });
+
 
 
 //
