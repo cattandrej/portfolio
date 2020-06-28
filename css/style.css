@@ -97,27 +97,27 @@ ul li {
 }
 
 .navbar-list li {
-    padding: 10px 32px 10px 0px;
+    margin: 10px 16px 10px 0px;
+    background-color: rgba(255, 255, 255, .15);
+    border-radius: 32px;
+    padding: 0px 12.5px;
+}
+
+.dark .navbar-list li {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.navbar-list li:hover {
+    background-color: rgba(255, 255, 255, .25);
+}
+
+.dark .navbar-list li:hover {
+    background-color: rgba(0, 0, 0, .15);
 }
 
 .cards {
     display: flex;
     flex-flow: row wrap;
-    overflow: hidden;
-    width: 100%;
-}
-
-
-#portfolio {
-    overflow: hidden;
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 377px;
-}
-
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 .card {
@@ -133,10 +133,6 @@ html, body {
     margin-bottom: 32px;
     display: flex;
     flex-direction: column;
-}
-
-.a_card {
-    transition: ease .25s;
 }
 
 .card:after {
@@ -222,6 +218,10 @@ html, body {
     font-size: .6rem;
 }
 
+
+#portfolio {
+    min-height: 377px;
+}
 #portfolio, .filters-bar {
     padding: 0px 10%;
 }
@@ -594,9 +594,6 @@ html, body {
     animation: .25s ease 0s 1 slideInFromBottom;
 }
 
-.navbar-list li:hover {
-    text-decoration: underline;
-}
 
 .photogallery {
     width: 100%;
@@ -789,7 +786,7 @@ img {
 
 @media screen and (max-width: 480px) {
     .cards {
-        justify-content: initial;
+        justify-content: center;
     }
     .navbar {
         overflow-x: scroll;
@@ -803,6 +800,7 @@ img {
     #portfolio {
         max-width: 100%;
         padding: 0px 7.5px;
+
     }
     .project-description {
         width: 100%;
@@ -838,16 +836,6 @@ img {
         padding: 0px 10px;
         margin: 10px 0px;
     }
-
-
-    .card-image img {
-        width: 343px;
-        height: 381px;
-        transform: translateY(-25%);
-    }
-
-    .hiddenCard {
-        width: 0px;
-    }
-    
 }
+
+
