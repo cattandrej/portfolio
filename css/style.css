@@ -123,10 +123,12 @@ ul li {
     width: 100%;
 }
 
+
 #portfolio {
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
+    min-height: 377px;
 }
 
 html, body {
@@ -147,6 +149,10 @@ html, body {
     margin-bottom: 32px;
     display: flex;
     flex-direction: column;
+}
+
+.a_card {
+    transition: ease .25s;
 }
 
 .card:after {
@@ -793,7 +799,7 @@ img {
 
 @media screen and (max-width: 480px) {
     .cards {
-        justify-content: center;
+        justify-content: initial;
     }
     .navbar {
         overflow-x: scroll;
@@ -879,7 +885,13 @@ img {
     }
 
     .card-image img {
-        width: 100%;
+        width: 343px;
+        height: 381px;
         transform: translateY(-25%);
     }
+
+    .hiddenCard {
+        width: 0px;
+    }
+    
 }

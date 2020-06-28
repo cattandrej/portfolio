@@ -23,7 +23,7 @@ $(".checkbox").each(function (index) {
 //
 var cardsAmount = $(".card").length;
 var cardContainerWidth = 0;
-var cardWidth = 0;
+var cardWidth = parseInt($(".card").css("width").substr(0,  $(".card").css("width").length - 2));
 var remainingSpace = 0;
 var cardsPerRow = 0;
 var cardMargin = 0;
@@ -49,15 +49,21 @@ $("a").find(".p-tag").click(function (event) {
 function updateCardMargins(n) {
     cardsAmount = n;
     cardContainerWidth = $(".cards").width() - 16;
-    cardWidth = 225;
     remainingSpace = ((cardContainerWidth / cardWidth) % 1) * cardWidth;
     cardsPerRow = (cardContainerWidth / cardWidth) - ((cardContainerWidth / cardWidth) % 1);
     cardMargin = remainingSpace / (cardsPerRow - 1);
 
-    if (cardMargin < 16) {
+
+  
+
+    while ((cardMargin < 50) && (cardsPerRow > 2)) {
+
+  
         remainingSpace += cardWidth;
+        
         cardsPerRow--;
         cardMargin = remainingSpace / (cardsPerRow - 1);
+        console.log("--------> card remainingSpace + card per row: " + remainingSpace + "; " + cardsPerRow  );
     }
 
     var cont = 0;
@@ -180,8 +186,10 @@ function updateCardsVisibility(event, id) {
 
         if (removedClasses == $($(this)).find(".card-tags").children().length) {
             $(this).addClass("hiddenCard");
+            $(this).parent().css("width", "0px");
         } else {
             $(this).removeClass("hiddenCard");
+            $(this).parent().css("width", cardWidth);
         }
 
         console.log("removed classes: " + removedClasses + "\nall classes: " + $(this).children().length);
