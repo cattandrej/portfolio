@@ -409,8 +409,7 @@ ul li {
 .download-section {
     display: flex;
     justify-content: center;
-    padding: 100px 0px;
-    background-color: rgba(0, 0, 0, 0.05)
+    padding: 25px 0px 50px;
 }
 
 .button {
