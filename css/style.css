@@ -12,8 +12,13 @@ a, a:hover, a:visited {
     text-decoration: unset;
 }
 
+.a_text {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 25px;
+    padding: 0px 5px;
+}
 .a_text:hover {
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, .25);
 }
 
 h1 {
@@ -163,6 +168,11 @@ ul li {
     background-color: transparent;
     z-index: 9999;
     border-color: white;
+}
+
+.card:hover .p-tag:hover {
+    background-color: white;
+    color: black;
 }
 
 .card:hover {
@@ -727,18 +737,22 @@ img {
 .col-year {
     width: 20%;
     padding: 15px;
+    box-sizing: border-box;
 }
 
 .year, .description-title {
     font-weight: 600;
     padding-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .col-description, .section-title {
     width: 80%;
     padding: 0px 15px;
     margin: 15px 0px;
+    box-sizing: border-box;
 }
+
 
 .col-description {
     border-left: 1px solid rgba(0, 0, 0, 0.05);
@@ -750,9 +764,8 @@ img {
 }
 
 .inline-row {
-
     display: flex;
-    flex: 1 1 0px;
+    width: 80%;
 }
 
 @media screen and (max-width: 480px) {
@@ -796,5 +809,16 @@ img {
     }
     .inline-row {
         flex-wrap: wrap;
+        width: 70%;
+    }
+    .col-year {
+        width: 30%;
+    }
+    .col-description, .section-title {
+        width: 70%;
+        padding: 0px 10px;
+        margin: 10px 0px;
     }
 }
+
+
