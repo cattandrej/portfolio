@@ -853,6 +853,9 @@ strong {
         padding: 0px 10px;
         margin: 10px 0px;
     }
+    .about-p {
+        width: 100%;
+    }
 }
 
 
