@@ -103,6 +103,11 @@ ul li {
     padding: 0px 12.5px;
 }
 
+
+.navbar-list a {
+    white-space: nowrap;
+}
+
 .dark .navbar-list li {
     background-color: rgba(0, 0, 0, .05);
 }
