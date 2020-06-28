@@ -24,7 +24,7 @@
 <body>
     <div class="photogallery hide">
         <div class="photogallery-topbar">
-            <div class="photogallery-close" onclick="closeGallery()"></div>
+            <div class="photogallery-close" onclick="closeGallery()" ></div>
         </div>
         <div class="photogallery-controls">
             <div class="photogallery-back-arrow" onclick="prevImg()">
@@ -35,23 +35,23 @@
                 <img class="photogallery-img" onclick="nextImg()">
             </div>
             <div class="photogallery-next-arrow" onclick="nextImg()">
-
-                <div class="spacing"></div>
-                <div class="arrow right"></div>
-
+  
+                    <div class="spacing"></div>
+                    <div class="arrow right"></div>
+         
             </div>
         </div>
         <div class="photogallery-line">
-
+            
         </div>
     </div>
-    <div class="cover rimac_photos dark">
+    <div class="cover leed">
         <div class="cover-items">
             <div class="cover-text">
 
                 <div class="page-title">
-                    <h2>Rimac Photos</h2>
-                    <p>2016 - presente — Servizi fotografici per l'azienda Rimac Machines.</p>
+                    <h2>L E E D</h2>
+                        <p>2016 — Progetto personale realizzato insieme a Nicola Brignoli.</p>
                 </div>
             </div>
 
@@ -60,8 +60,8 @@
             <div class="navbar">
                 <ul class="navbar-list">
                     <li><a href="../index.html">Portfolio</a></li>
-                    <li><a href="../en/cv.html">Curriculum</a></li>
-                    <li><a href="../en/about.html">About</a></li>
+                    <li><a href="../it/cv.html">Curriculum</a></li>
+                    <li><a href="../it/about.html">About</a></li>
                     
                 </ul>
             </div>
@@ -71,58 +71,26 @@
 
     <div class="project-container">
         <div class="project-description">
+            <p class="highlight">L E E D permette il controllo di strisce LED creando diverse atmosfere luminose nella propria area di lavoro.</p>
             <p>
-                Discuto con il cliente la finalità delle fotografie per poi creare il servizio fotografico più adatto.
-                I servizi fotografici che ho realizzato variano dalla documentazione dei processi produttivi alla
-                fotografia dei
-                macchinari e dei prodotti, cercando sempre di valorizzarne funzioni e forme.
+                L’applicazione Windows comunica con un Arduino collegato al PC via USB. Essa permette di scegliere tra numerosi colori e di visualizzarli attraverso tre modalità: Static (un colore statico), Cycle (transizione sfumata tra colori) e Wave (scorrimento dei colori lungo la striscia).
+                <br><br>
+                Mi sono occupato della programmazione dell’applicazione Windows in C#, della gestione della sua interfaccia grafica e della programmazione di Arduino per il controllo dei LED.
             </p>
         </div>
         <div class="gallery">
-
             <div class="gallery-photo img-container-big">
-                <img class="img-big" src="../res/projects/rimac_photos_10.jpg">
+                <img class="img-big" src="../res/projects/leed03.jpg">
             </div>
 
             <div class="gallery-photo img-container-fit">
-                <img class="img-fit" src="../res/projects/rimac_photos_03.jpg">
+                <img class="img-fit" src="../res/projects/leed01.jpg">
             </div>
 
             <div class="gallery-photo img-container-fit">
-                <img class="img-fit" src="../res/projects/rimac_photos_02.jpg">
+                <img class="img-fit" src="../res/projects/leed02.jpg">
             </div>
-
-            <div class="gallery-photo img-container-big">
-                <img class="img-big" src="../res/projects/rimac_photos_08.jpg">
-            </div>
-
-            <div class="gallery-photo img-container-fit">
-                <img class="img-fit" src="../res/projects/rimac_photos_07.jpg">
-            </div>
-
-            <div class="gallery-photo img-container-fit">
-                <img class="img-fit" src="../res/projects/rimac_photos_06.jpg">
-            </div>
-
-            <div class="gallery-photo img-container-big">
-                <img class="img-big" src="../res/projects/rimac_photos_01.jpg">
-            </div>
-
-            <div class="gallery-photo img-container-fit">
-                <img class="img-fit" src="../res/projects/rimac_photos_04.jpg">
-            </div>
-
-            <div class="gallery-photo img-container-fit">
-                <img class="img-fit" src="../res/projects/rimac_photos_09.jpg">
-            </div>
-
-            <div class="gallery-photo img-container-big">
-                <img class="img-big" src="../res/projects/rimac_photos_05.jpg">
-            </div>
-
         </div>
-
-
     </div>
     <div class="minifooter">
         <div class="love">
@@ -138,5 +106,4 @@
     <script src="../js/photogallery.js"></script>
 
 </body>
-
 </html>
