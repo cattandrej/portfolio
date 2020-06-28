@@ -17,7 +17,6 @@ a, a:hover, a:visited {
     border-radius: 25px;
     padding: 0px 5px;
 }
-
 .a_text:hover {
     background-color: rgba(255, 255, 255, .25);
 }
@@ -113,8 +112,7 @@ ul li {
 }
 
 .dark .navbar-list li:hover {
-    background-color: rgba(0, 0, 0, .15);
-}
+    background-color: rgba(0, 0, 0, .15);}
 
 .cards {
     display: flex;
@@ -162,6 +160,7 @@ html, body {
     margin-top: calc(345px);
     border-radius: 0px;
     background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     overflow: hidden;
     box-sizing: border-box;
     margin-bottom: 32px;
@@ -609,6 +608,8 @@ html, body {
     animation: .25s ease 0s 1 slideInFromBottom;
 }
 
+
+
 .photogallery {
     width: 100%;
     height: 100%;
@@ -783,6 +784,7 @@ img {
     box-sizing: border-box;
 }
 
+
 .col-description {
     border-left: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -848,41 +850,7 @@ img {
         padding: 0px 10px;
         margin: 10px 0px;
     }
-    .cards a {
-        width: 100%;
-    }
-    .card {
-        width: 100%;
-        height: 250px;
-        background-size: 100%;
-    }
-    .card:after {
-        width: calc(100% - 15px);
-        height: 0px;
-        margin-top: 250px;
-        content: "";
-        border-radius: 0px;
-        background-color: transparent;
-        overflow: hidden;
-        box-sizing: border-box;
-        position: absolute;
-        opacity: 0;
-        background-size: 100%;
-        background-image: url("../res/go.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-position-y: 34%;
-        transition: ease .25s;
-    }
-    .card:hover:after {
-        opacity: 1;
-        margin-top: 0px;
-        height: 250px;
-        transition: ease .25s;
-    }
-    .card:hover .card-title {
-        position: initial;
-    }
+
 
     .card-image img {
         width: 343px;
