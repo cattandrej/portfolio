@@ -16,7 +16,7 @@ function photogalleryPlay() {
             nextImg();
             progress = 0;
         }
-        setTimeout(function() { updateProgress(); }, progressBarUpdateSpeed);
+        setTimeout(function () { updateProgress(); }, progressBarUpdateSpeed);
     }
 }
 
@@ -28,7 +28,7 @@ function photogalleryPlayPause() {
 
 function updateProgress() {
     if (play) {
-        progress +=  1 / (speed / progressBarUpdateSpeed);
+        progress += 1 / (speed / progressBarUpdateSpeed);
         photogalleryPlay();
         updateLine();
     }
@@ -55,8 +55,8 @@ function openGallery(imgList, currentImage) {
         console.log("photogallery opened");
         play = true;
         photogalleryPlay();
-        $("body").css("overflow","hidden");
-    
+        $("body").css("overflow", "hidden");
+
         var index = 0;
         while (currentImage !== imgList[index][1]) {
             index++;
@@ -73,7 +73,7 @@ function closeGallery() {
     galleryIsOpen = false;
     progress = 0;
     $(".photogallery").addClass("hide");
-    $("body").css("overflow","visible");
+    $("body").css("overflow", "visible");
 }
 
 $(document).keyup(function (e) {
@@ -89,16 +89,14 @@ $(document).keyup(function (e) {
 
     if (!$(".photogallery").hasClass("hide")) {
         if ((e.key === "ArrowLeft") || (e.key === "ArrowUp")) {
-            progress = 0;
             prevImg();
         } else {
             if ((e.key === "ArrowRight") || (e.key === "ArrowDown")) {
-                progress = 0;
                 nextImg();
             }
         }
     }
-    
+
 });
 
 // $(".photogallery-img").swiperight(function() {
@@ -111,9 +109,9 @@ $(document).keyup(function (e) {
 
 
 function prevImg() {
-    if (!play) {
-        progress = 0;
-    }
+
+    progress = 0;
+
     if (currentImagePos > 0) {
         currentImagePos--;
     } else {
@@ -125,9 +123,9 @@ function prevImg() {
 
 function nextImg() {
     console.log(imgElements);
-    if (!play) {
-        progress = 0;
-    }
+
+    progress = 0;
+
     if (currentImagePos < imgElements.length - 1) {
         currentImagePos++;
     } else {
@@ -135,13 +133,13 @@ function nextImg() {
     }
     $(".photogallery img").attr("src", imgElements[currentImagePos][1]);
     updateLine();
-}  
+}
 
 function updateLine() {
-    var w = ((window.innerWidth -  30) / (imgElements.length - 1));
-    var wAutoPlay = ((window.innerWidth -  30) / (imgElements.length));
+    var w = ((window.innerWidth - 30) / (imgElements.length - 1));
+    var wAutoPlay = ((window.innerWidth - 30) / (imgElements.length));
     if (play) {
-        $(".photogallery-line").css("width",  wAutoPlay * (currentImagePos) + (wAutoPlay * progress) );
+        $(".photogallery-line").css("width", wAutoPlay * (currentImagePos) + (wAutoPlay * progress));
     } else {
         $(".photogallery-line").css("width", w * (currentImagePos));
     }
@@ -165,15 +163,15 @@ function onResize() {
 
     var y = x * (9 / 16);
 
-    $("iframe").each(function(i) {
+    $("iframe").each(function (i) {
         $(this).css("height", y + "px");
-        
+
         if ($(this).hasClass("4_3")) {
             $(this).css("width", y * (4 / 3) + "px");
         } else {
             $(this).css("width", x + "px");
         }
     });
-  }
+}
 
-  window.addEventListener('resize', onResize);
+window.addEventListener('resize', onResize);
