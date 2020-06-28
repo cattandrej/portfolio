@@ -288,6 +288,10 @@ ul li {
     width: 8px;
 }
 
+.email {
+    background-image: url(../res/icon_email.svg);
+}
+
 .extra-card {
     cursor: pointer;
     display: flex;
@@ -776,6 +780,14 @@ img {
 
 .col-description {
     border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+strong {
+    font-weight: 600;
+}
+
+.about-p p {
+    margin-bottom: 10px;
 }
 
 .section-title {
