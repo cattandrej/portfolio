@@ -34,17 +34,17 @@ $(window).resize(function () {
 });
 
 
-$("a").find(".p-tag").click(function(event){
+$("a").find(".p-tag").click(function (event) {
     event.preventDefault();
     var _this = $(this);
 
-    tags.forEach((function(element) {
+    tags.forEach((function (element) {
         if ((_this).hasClass(element[0])) {
-            updateCardsVisibility("", element[0]);
+            updateCardsVisibility(event, element[0]);
         }
     }));
 
-  });
+});
 
 function updateCardMargins(n) {
     cardsAmount = n;
@@ -86,7 +86,7 @@ function updateCardMargins(n) {
 // Card visibility
 //
 function updateCardsVisibility(event, id) {
-    
+
     var cardCont = 0;
     console.log("click on checkbox " + id);
 
@@ -97,9 +97,22 @@ function updateCardsVisibility(event, id) {
     } else {
         if (event.shiftKey) {
 
+            var visibleCards = 0;
+            tags.forEach(function (element) {
+                if (element[1]) {
+                    cardCont++;
+                }
+            });
+            console.log(visibleCards);
             for (var i = 0; i < tags.length; i++) {
                 if (tags[i][0] === id) {
-                    tags[i][1] = !tags[i][1];
+                    if (cardCont == 1) {
+                        if (!tags[i][1]) {
+                            tags[i][1] = !tags[i][1];
+                        }
+                    } else {
+                        tags[i][1] = !tags[i][1];
+                    }
                 }
             }
         } else {
@@ -125,14 +138,14 @@ function updateCardsVisibility(event, id) {
         tags[0][1] = false;
     }
 
-        for (var i = 0; i < tags.length; i++) {
-            if (tags[i][1]) {
-                $("#" + tags[i][0]).addClass("checked");
-            } else {
-                $("#" + tags[i][0]).removeClass("checked");
+    for (var i = 0; i < tags.length; i++) {
+        if (tags[i][1]) {
+            $("#" + tags[i][0]).addClass("checked");
+        } else {
+            $("#" + tags[i][0]).removeClass("checked");
 
-            }
         }
+    }
 
     // $(".card").each(function () {
     //     if ($(this).hasClass(id)) {
@@ -173,7 +186,7 @@ function updateCardsVisibility(event, id) {
 
         console.log("removed classes: " + removedClasses + "\nall classes: " + $(this).children().length);
         for (var tmp = 0; tmp < $($(this)).find(".card-tags").children().length; tmp++) {
-            $($(this)).find(".card-tags").children().each( function () {
+            $($(this)).find(".card-tags").children().each(function () {
                 console.log(tmp + ": " + $(this).attr("class"));
             });
         }
