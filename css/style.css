@@ -858,4 +858,36 @@ strong {
     }
 }
 
+@media print {
+    body {
+        padding: 50px;
+    }
+    .cover {
+        height: auto;
+        color: black !important;
+    }
+    .cover-text{
+        padding: 0px;
+    }
+    #curriculum {
+        margin: 0px;
+        padding: 0px;
+    }
+    .navbar,.download-section, .minifooter {
+        display: none;
+    }
+
+    .col-year, .col-description, .section-title, .page-title {
+        margin: 0px;
+        padding: 0px;
+    }
+    .col-description {
+        padding-left: 15px;
+    }
+
+    .page-title {
+        padding: 25px 0px;
+    }
+}
+
 
