@@ -790,16 +790,17 @@ img {
     }
     .navbar {
         overflow-x: scroll;
+        padding: 0px 15px;
     }
     .project-container {
-        padding: 30px 7.5px;
+        padding: 30px 15px;
     }
     #curriculum {
         margin: 7.5px;
     }
     #portfolio {
         max-width: 100%;
-        padding: 0px 7.5px;
+        padding: 0px 15px;
 
     }
     .project-description {
