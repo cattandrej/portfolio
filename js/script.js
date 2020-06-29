@@ -35,15 +35,16 @@ $(window).resize(function () {
 
 
 $("a").find(".p-tag").click(function(event){
-    event.preventDefault();
-    var _this = $(this);
-
-    tags.forEach((function(element) {
-        if ((_this).hasClass(element[0])) {
-            updateCardsVisibility("", element[0]);
-        }
-    }));
-
+    if (!($(".filters-bar").css("display") === "none")) {
+        event.preventDefault();
+        var _this = $(this);
+    
+        tags.forEach((function(element) {
+            if ((_this).hasClass(element[0])) {
+                updateCardsVisibility("", element[0]);
+            }
+        }));
+    }
   });
 
 function updateCardMargins(n) {
