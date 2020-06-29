@@ -6,13 +6,21 @@
 var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
 var is_chrome = !!window.chrome && !is_opera && !is_Edge;
-var is_explorer= typeof document !== 'undefined' && !!document.documentMode && !is_Edge;
+var is_explorer = typeof document !== 'undefined' && !!document.documentMode && !is_Edge;
 var is_firefox = typeof window.InstallTrigger !== 'undefined';
 var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-if (is_safari) {
-    alert("usi safari");
-}
+
+
+$(".card").hover(function () {
+    if (is_safari) {
+        $(this).find(".card-tags p").css("z-index", "-1000");
+    }
+}, function () {
+    if (is_safari) {
+        $(this).find(".card-tags p").css("z-index", "1");
+    }
+});
 
 var tags = [
 ];
@@ -46,18 +54,18 @@ $(window).resize(function () {
 });
 
 
-$("a").find(".p-tag").click(function(event){
+$("a").find(".p-tag").click(function (event) {
     if (!($(".filters-bar").css("display") === "none")) {
         event.preventDefault();
         var _this = $(this);
-    
-        tags.forEach((function(element) {
+
+        tags.forEach((function (element) {
             if ((_this).hasClass(element[0])) {
                 updateCardsVisibility("", element[0]);
             }
         }));
     }
-  });
+});
 
 function updateCardMargins(n) {
     cardsAmount = n;
@@ -99,7 +107,7 @@ function updateCardMargins(n) {
 // Card visibility
 //
 function updateCardsVisibility(event, id) {
-    
+
     var cardCont = 0;
     console.log("click on checkbox " + id);
 
@@ -138,14 +146,14 @@ function updateCardsVisibility(event, id) {
         tags[0][1] = false;
     }
 
-        for (var i = 0; i < tags.length; i++) {
-            if (tags[i][1]) {
-                $("#" + tags[i][0]).addClass("checked");
-            } else {
-                $("#" + tags[i][0]).removeClass("checked");
+    for (var i = 0; i < tags.length; i++) {
+        if (tags[i][1]) {
+            $("#" + tags[i][0]).addClass("checked");
+        } else {
+            $("#" + tags[i][0]).removeClass("checked");
 
-            }
         }
+    }
 
     // $(".card").each(function () {
     //     if ($(this).hasClass(id)) {
@@ -186,7 +194,7 @@ function updateCardsVisibility(event, id) {
 
         console.log("removed classes: " + removedClasses + "\nall classes: " + $(this).children().length);
         for (var tmp = 0; tmp < $($(this)).find(".card-tags").children().length; tmp++) {
-            $($(this)).find(".card-tags").children().each( function () {
+            $($(this)).find(".card-tags").children().each(function () {
                 console.log(tmp + ": " + $(this).attr("class"));
             });
         }
