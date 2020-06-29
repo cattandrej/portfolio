@@ -188,8 +188,15 @@ function updateCardsVisibility(event, id) {
 
         if (removedClasses == $($(this)).find(".card-tags").children().length) {
             $(this).addClass("hiddenCard");
+            if (is_safari) {
+                $(this).parent().css("display", "none");
+            }
         } else {
             $(this).removeClass("hiddenCard");
+            if (is_safari) {
+                $(this).parent().css("display", "initial");
+            }
+
         }
 
         console.log("removed classes: " + removedClasses + "\nall classes: " + $(this).children().length);
