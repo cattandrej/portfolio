@@ -564,6 +564,10 @@ ul li {
     max-height: 480px;
 }
 
+.full-height {
+    max-width: 100%
+}
+
 .img-big {
     max-width: 100%;
     height: auto;
