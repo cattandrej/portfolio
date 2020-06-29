@@ -40,10 +40,13 @@ html, body {
     color: white;
     height: 400px;
     display: flex;
-    background-image: url("../res/cover.png");
     background-repeat: no-repeat;
     background-position: right;
     background-position-x: 90%;
+}
+
+.cover-default {
+    background-image: url("../res/cover.png");
 }
 
 .cover-items {
