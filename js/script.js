@@ -22,6 +22,15 @@ $(".card").hover(function () {
     }
 });
 
+var allChecked = true;
+$(".checkbox.reset").hover(function () {
+    $(this).addClass("checked");
+}, function () {
+    if (!allChecked) {
+        $(this).removeClass("checked");
+    }
+});
+
 var tags = [
 ];
 
@@ -134,7 +143,7 @@ function updateCardsVisibility(event, id) {
         }
     }
 
-    var allChecked = true;
+    allChecked = true;
     for (var i = 1; i < tags.length; i++) {
         if (!tags[i][1]) {
             allChecked = false;
@@ -142,8 +151,10 @@ function updateCardsVisibility(event, id) {
     }
     if (allChecked) {
         tags[0][1] = true;
+        $("#" + tags[0][0]).addClass("disabled");
     } else {
         tags[0][1] = false;
+        $("#" + tags[0][0]).removeClass("disabled");
     }
 
     for (var i = 0; i < tags.length; i++) {

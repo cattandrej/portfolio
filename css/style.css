@@ -353,6 +353,7 @@ ul li {
 
 .reset {
     border-color: black;
+    color: black;
 }
 
 .reset .checkmark {
@@ -388,10 +389,6 @@ ul li {
 
 .checkbox-label {
     padding-right: 10px;
-}
-
-.checkbox-reset {
-    margin: 0px;
 }
 
 .hiddenCard {
@@ -828,6 +825,15 @@ strong {
     display: flex;
     width: 80%;
 }
+
+.disabled {
+    opacity: 12.5%;
+}
+
+.checked {
+    color: white;
+}
+
 
 @media screen and (max-width: 480px) {
     .cards {
