@@ -295,6 +295,10 @@ ul li {
     background-image: url(../res/icon_email.svg);
 }
 
+.go-in-site {
+    background-image: url(../res/go-in-site.svg);
+}
+
 .extra-card {
     cursor: pointer;
     display: flex;
