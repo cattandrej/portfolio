@@ -769,7 +769,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 0%;
-    background-position-x: 55%;
+    background-position-x: 50%;
     background-size: contain;
     margin: 15px 0px;
 }
@@ -834,6 +834,25 @@ strong {
     color: white;
 }
 
+@media screen and (max-width: 1024px) {
+    #about{
+        max-width: 100%;
+        padding: 0px 10%;
+    }
+    .mobile-wrap {
+        flex-wrap: wrap;
+    }
+    
+    .about-photo {
+        width: 100%;
+        height: 300px;
+    }
+    .about-p {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 
 @media screen and (max-width: 480px) {
     .cards {
@@ -852,12 +871,6 @@ strong {
     #portfolio, #about{
         max-width: 100%;
         padding: 0px 15px;
-
-    }
-
-    .about-photo {
-        width: 100%;
-        height: 300px;
     }
     .project-description {
         width: 100%;
@@ -893,21 +906,18 @@ strong {
         padding: 0px 10px;
         margin: 10px 0px;
     }
-    .about-p {
-        width: auto;
-        max-width: 100%;
-    }
     .about-photo {
         width: 100%;
-    }
-    .mobile-wrap {
-        flex-wrap: wrap;
     }
     .filters-bar {
         display: none;
     }
     .cover {
         margin-bottom: 15px;
+    }
+    .about-p {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
