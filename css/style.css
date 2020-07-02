@@ -1,5 +1,14 @@
-:root {
-    --accent-color: #ee313c;
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 html, body, div, ul, p, a, h1, h2, h3, h4, h5, img {
@@ -33,6 +42,10 @@ h2 {
 html, body {
     font-family: 'Poppins', sans-serif;
     font-size: 12pt;
+}
+
+.regular {
+    font-weight: 400;
 }
 
 .cover {
@@ -585,6 +598,7 @@ ul li {
     display: flex;
     justify-content: center;
     color: rgba(128, 128, 128, 1);
+    margin-top: auto;
 }
 
 .love {
@@ -593,7 +607,7 @@ ul li {
 }
 
 .red {
-    color: var(--accent-color);
+    color: #ee313c;
 }
 
 @keyframes slideInFromBottom {
