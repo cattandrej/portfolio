@@ -41,7 +41,7 @@ $(".checkbox").each(function (index) {
         false
     ];
 
-    console.log($(this).attr("id"));
+    //console.log($(this).attr("id"));
     temp[0] = $(this).attr("id");
 
     tags.push(temp);
@@ -118,7 +118,7 @@ function updateCardMargins(n) {
 function updateCardsVisibility(event, id) {
 
     var cardCont = 0;
-    console.log("click on checkbox " + id);
+    //console.log("click on checkbox " + id);
 
     if (id === tags[0][0]) {
         for (var i = 0; i < tags.length; i++) {
@@ -176,7 +176,7 @@ function updateCardsVisibility(event, id) {
     // });
 
     $(".card-tags > p").each(function () {
-        console.log(id + "; " + ($(this).attr("class")));
+        //console.log(id + "; " + ($(this).attr("class")));
         if ($(this).hasClass(id)) {
             $(this).toggleClass("tag-enabled");
         }
@@ -207,9 +207,9 @@ function updateCardsVisibility(event, id) {
             if (is_safari) {
                 $(this).parent().css("display", "initial");
             }
-
         }
 
+        /*
         console.log("removed classes: " + removedClasses + "\nall classes: " + $(this).children().length);
         for (var tmp = 0; tmp < $($(this)).find(".card-tags").children().length; tmp++) {
             $($(this)).find(".card-tags").children().each(function () {
@@ -217,8 +217,8 @@ function updateCardsVisibility(event, id) {
             });
         }
         console.log("***");
+        */
     });
-
 
     updateCardMargins(cardCont);
 }
