@@ -64,10 +64,12 @@ html, body {
     background-repeat: no-repeat;
     background-position: right;
     background-position-x: 90%;
+    background-size: cover;
 }
 
 .cover-default {
     background-image: url("../res/cover.jpg");
+    background-size: auto;
 }
 
 .cover-items {
@@ -478,6 +480,11 @@ ul li {
 
 .dark {
     color: black;
+}
+
+.t154_ws {
+    background-image: url("../res/projects/t154_ws_00.jpg");
+    background-position-x: 22.5%;
 }
 
 .medusa {
