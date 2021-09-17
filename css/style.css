@@ -959,6 +959,7 @@ strong {
 }
 
 @media print {
+
     body {
         padding: 50px;
     }
@@ -987,6 +988,10 @@ strong {
 
     .page-title {
         padding: 25px 0px;
+    }
+    
+    .inline-icon {
+        display: none;
     }
 }
 
