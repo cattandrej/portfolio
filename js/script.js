@@ -10,6 +10,57 @@ var is_explorer = typeof document !== 'undefined' && !!document.documentMode && 
 var is_firefox = typeof window.InstallTrigger !== 'undefined';
 var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
+// Dichiariamo l'array con le informazioni sulle lingue
+var languages = [
+    ["en", "en_US", "English"],
+    ["it", "it_IT", "Italiano"]
+];
+
+// Dichiariamo una funzione che crea i link alla lingua
+function populateLanguageLinks() {
+    var currentLang = document.documentElement.lang; // ottieni la lingua corrente dalla metatag del documento
+    var currentPath = window.location.pathname; // ottieni il percorso corrente
+
+    var container = document.querySelector('.cover-lang'); // seleziona il contenitore di lingua
+
+    // Cicla su ogni lingua nell'array
+    for (var i = 0; i < languages.length; i++) {
+        var lang = languages[i];
+        
+        // Creiamo il div principale per ogni lingua
+        var langDiv = document.createElement('div');
+        
+        // Creiamo il contenuto in base a se la lingua è attualmente selezionata o no
+        if (currentLang == lang[1]) {
+            // Se la lingua corrente è selezionata, creiamo un paragrafo senza link
+            langDiv.className = "language-link current-language";
+            var langContent = document.createElement('p');
+            langContent.textContent = lang[2];
+            langDiv.appendChild(langContent);
+        } else {
+            // Se la lingua non è la corrente, creiamo un link
+            langDiv.className = "language-link";
+            var langLink = document.createElement('a');
+            var newPath = currentPath.replace(currentLang.split('_')[0], lang[0]); // sostituisci la lingua nel percorso corrente
+            langLink.href = newPath;
+            
+            var langContent = document.createElement('p');
+            langContent.textContent = lang[2];
+            
+            langLink.appendChild(langContent);
+            langDiv.appendChild(langLink);
+        }
+        
+        // Aggiungiamo il div della lingua al contenitore
+        container.appendChild(langDiv);
+    }
+}
+
+// Richiamiamo la funzione quando il DOM è pronto
+document.addEventListener('DOMContentLoaded', function() {
+    populateLanguageLinks();
+});
+
 
 
 $(".card").hover(function () {

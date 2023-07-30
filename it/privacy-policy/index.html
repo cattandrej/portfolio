@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it_IT">
+
+
+</script>
+
+<head>
+    <title>Andrej Cattaneo · Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="Andrej Cattaneo · Portfolio" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- link to Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../res/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../res/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../res/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../../res/favicon/site.webmanifest">
+
+    <meta name="keywords" content="andrej, cattaneo, portfolio, communication, designer">
+</head>
+
+<body>
+
+
+
+    <div class="cover cover-default">
+        <div class="cover-items">
+            
+            <div class="cover-text">
+                <div class="cover-title">
+                    <h1>Andrej Cattaneo</h1>
+                    <p>Communication Designer</p>
+    
+                    <div class="page-title animate-in">
+                        <h2>Portfolio</h2>
+                    </div>
+                </div>
+
+                <div class="cover-lang">
+                </div>
+            </div>
+
+
+
+            <div class="navbar">
+                <ul class="navbar-list">
+                    <li><a href="../">Portfolio</a></li>
+                    <li><a href="../cv/">Resume</a></li>
+                    <li><a href="../about/">About</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+
+    <div id="privacy">
+
+        <h1>Politica sulla Privacy</h1>
+
+        <p>La tua privacy è importante per noi. È politica del nostro sito rispettare la tua privacy in merito a qualsiasi informazione che possiamo raccogliere dal sito web e da altri siti che possediamo e operiamo.</p>
+        
+        <p>Raccogliamo solo informazioni personali rilevanti e necessarie per fornirti i servizi richiesti. Raccogliamo queste informazioni con il tuo esplicito consenso. Spieghiamo in modo chiaro quali informazioni raccogliamo e come le utilizziamo.</p>
+        
+        <h2>Log dei dati</h2>
+        
+        <p>Come molti operatori di siti web, raccogliamo informazioni che il tuo browser invia ogni volta che visiti il nostro sito ("Log dei dati"). Questi Log dei dati possono includere informazioni come l'indirizzo IP del tuo computer, il tipo di browser, la versione del browser, le pagine del nostro sito che visiti, l'ora e la data della tua visita, il tempo trascorso su quelle pagine e altre statistiche.</p>
+        
+        <h2>Google Analytics</h2>
+        
+        <p>Utilizziamo Google Analytics per misurare il traffico sul nostro sito web. Google ha la propria Politica sulla Privacy che puoi consultare <a href="https://policies.google.com/privacy">qui</a>. Se preferisci disabilitare il tracciamento di Google Analytics, visita la pagina di <a href="https://tools.google.com/dlpage/gaoptout">opt-out di Google Analytics</a>.</p>
+        
+        <h2>Cookies</h2>
+        
+        <p>Utilizziamo "cookies" per raccogliere informazioni. Puoi istruire il tuo browser a rifiutare tutti i cookie o a indicare quando viene inviato un cookie. Tuttavia, se non accetti i cookie, potresti non essere in grado di utilizzare alcune parti del nostro servizio.</p>
+        
+        <h2>Privacy dei minori</h2>
+        
+        <p>Il nostro servizio non si rivolge a persone di età inferiore a 13 anni ("Minori"). Non raccogliamo consapevolmente informazioni personali identificabili da minori. Se sei un genitore o un tutore e sei consapevole che tuo figlio ci ha fornito Informazioni Personali, ti preghiamo di contattarci. Se veniamo a conoscenza del fatto che abbiamo raccolto Informazioni Personali da minori senza la verifica del consenso dei genitori, adotteremo misure per rimuovere tali informazioni dai nostri server.</p>
+        
+        <h2>Modifiche a questa Politica sulla Privacy</h2>
+        
+        <p>Potremmo aggiornare la nostra Politica sulla Privacy di tanto in tanto. Ti consigliamo di rivedere periodicamente questa pagina per eventuali modifiche. Ti informeremo di eventuali modifiche pubblicando la nuova Politica sulla Privacy su questa pagina. Queste modifiche entreranno in vigore immediatamente dopo la loro pubblicazione su questa pagina.</p>
+        
+        <h2>Contatti</h2>
+        
+        <p>Se hai domande sulla nostra Politica sulla Privacy, non esitare a contattarci.</p>
+        
+
+    </div>
+
+    <div class="minifooter">
+        <div class="love">
+            <p>Made with <span class="red">❤</span> by me</p>
+            <p>© Andrej Cattaneo 2023</p>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var cookieBanner = document.getElementById('cookieBanner');
+            var acceptedCookies = document.cookie.split('; ').find(row => row.startsWith('acceptedCookies'));
+    
+            if (!acceptedCookies) {
+                cookieBanner.style.display = "block";
+            }
+    
+            document.getElementById('acceptCookies').onclick = function() {
+                var date = new Date();
+                date.setFullYear(date.getFullYear() + 1);
+                document.cookie = `acceptedCookies=true; expires=${date.toUTCString()}; path=/`;
+                cookieBanner.style.display = "none";
+                
+                // Carica il Google Analytics solo dopo che l'utente ha accettato i cookie
+                var script = document.createElement('script');
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SHCNLSWMJX';
+                script.async = true;
+                document.head.appendChild(script);
+    
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-SHCNLSWMJX');
+            }
+        });
+    </script>
+
+</body>
+</html>
