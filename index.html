@@ -3,10 +3,6 @@
 
 <body>
 
-    <div id="cookieBanner" class="cookie-banner">
-        <p>Utilizziamo i cookie per personalizzare contenuti ed annunci, per fornire funzionalità dei social media e per analizzare il nostro traffico. Per ulteriori informazioni, consulta la nostra <a href="/privacy-policy">Politica sulla privacy</a>.</p>
-        <button id="acceptCookies">Accetto</button>
-    </div>
 
   <script type="text/javascript">
     // Ottieni la lingua dell'utente
@@ -21,35 +17,6 @@
       window.location.href = "/en/";
     }
   </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            var cookieBanner = document.getElementById('cookieBanner');
-            var acceptedCookies = document.cookie.split('; ').find(row => row.startsWith('acceptedCookies'));
-    
-            if (!acceptedCookies) {
-                cookieBanner.style.display = "block";
-            }
-    
-            document.getElementById('acceptCookies').onclick = function() {
-                var date = new Date();
-                date.setFullYear(date.getFullYear() + 1);
-                document.cookie = `acceptedCookies=true; expires=${date.toUTCString()}; path=/`;
-                cookieBanner.style.display = "none";
-                
-                // Carica il Google Analytics solo dopo che l'utente ha accettato i cookie
-                var script = document.createElement('script');
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SHCNLSWMJX';
-                script.async = true;
-                document.head.appendChild(script);
-    
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-SHCNLSWMJX');
-            }
-        });
-    </script>
 
 </body>
 
