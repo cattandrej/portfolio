@@ -14,7 +14,7 @@ function photogalleryPlay() {
     if (play) {
         if (progress >= 1) {
             nextImg();
-            progress = 0;
+            progress = 0;   
         }
         setTimeout(function () { updateProgress(); }, progressBarUpdateSpeed);
     }
