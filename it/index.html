@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="it_IT">
 
-
-
 <head>
     <title>Andrej Cattaneo · Portfolio</title>
     <meta charset="UTF-8">
@@ -26,7 +24,9 @@
 <body>
 
     <div id="cookieBanner" class="cookie-banner">
-        <p id="cookie-text">Utilizziamo i cookie per personalizzare contenuti ed annunci, per fornire funzionalità dei social media e per analizzare il nostro traffico. Per ulteriori informazioni, consulta la nostra <a href="/it/privacy-policy/">Politica sulla privacy</a>.</p>
+        <p id="cookie-text">Utilizziamo i cookie per personalizzare contenuti ed annunci, per fornire funzionalità dei
+            social media e per analizzare il nostro traffico. Per ulteriori informazioni, consulta la nostra <a
+                href="/it/privacy-policy/">Politica sulla privacy</a>.</p>
         <button id="acceptCookies">Accetto</button>
     </div>
 
@@ -37,7 +37,7 @@
                 <div class="cover-title">
                     <h1>Andrej Cattaneo</h1>
                     <p>Designer della Comunicazione</p>
-    
+
                     <div class="page-title animate-in">
                         <h2>Portfolio</h2>
                     </div>
@@ -133,6 +133,7 @@
                     <p>Fotografia</p>
                 </div>
             </div>
+
             <div class="checkbox games_videogames checked" id="games_videogames"
                 onclick="updateCardsVisibility(event, 'games_videogames')">
                 <div class="checkbox-circle">
@@ -151,8 +152,7 @@
                     <p>UX & UI</p>
                 </div>
             </div>
-            <div class="checkbox coding checked" id="coding"
-                onclick="updateCardsVisibility(event, 'coding')">
+            <div class="checkbox coding checked" id="coding" onclick="updateCardsVisibility(event, 'coding')">
                 <div class="checkbox-circle">
                     <div class="checkmark"></div>
                 </div>
@@ -166,6 +166,28 @@
     <div id="portfolio">
 
         <div class="cards">
+
+
+            <!-- CARD: INDUSTRIAL UI -->
+            <a href="portfolio/industrial-ui/">
+                <div class="card interaction_design">
+
+                    <div class="card-image">
+                        <img src="../res/industrial_ui.png">
+                    </div>
+
+                    <div class="card-text">
+                        <div class="card-title">
+                            <p>UI per PLC</p>
+                        </div>
+
+                        <div class="card-tags">
+                            <p class="graphic_design p-tag tag-enabled">Graphic Design</p>
+                            <p class="user_interface p-tag tag-enabled">UX & UI</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
 
             <!-- CARD: SPOT T154 WS -->
             <a href="portfolio/t154-ws/">
@@ -519,25 +541,25 @@
         document.addEventListener('DOMContentLoaded', (event) => {
             var cookieBanner = document.getElementById('cookieBanner');
             var acceptedCookies = document.cookie.split('; ').find(row => row.startsWith('acceptedCookies'));
-    
+
             if (!acceptedCookies) {
                 cookieBanner.style.display = "block";
             }
-    
-            document.getElementById('acceptCookies').onclick = function() {
+
+            document.getElementById('acceptCookies').onclick = function () {
                 var date = new Date();
                 date.setFullYear(date.getFullYear() + 1);
                 document.cookie = `acceptedCookies=true; expires=${date.toUTCString()}; path=/`;
                 cookieBanner.style.display = "none";
-                
+
                 // Carica il Google Analytics solo dopo che l'utente ha accettato i cookie
                 var script = document.createElement('script');
                 script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SHCNLSWMJX';
                 script.async = true;
                 document.head.appendChild(script);
-    
+
                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
+                function gtag() { dataLayer.push(arguments); }
                 gtag('js', new Date());
                 gtag('config', 'G-SHCNLSWMJX');
             }
@@ -545,4 +567,5 @@
     </script>
 
 </body>
+
 </html>

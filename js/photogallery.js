@@ -7,7 +7,7 @@ onResize();
 
 var progress = 0;
 var play = false;
-var speed = 5000;
+var speed = 7500;
 var progressBarUpdateSpeed = 100;
 
 function photogalleryPlay() {
@@ -56,6 +56,7 @@ function openGallery(imgList, currentImage) {
         play = true;
         photogalleryPlay();
         $("body").css("overflow", "hidden");
+        $("html").css("overflow", "hidden");
 
         var index = 0;
         while (currentImage !== imgList[index][1]) {
@@ -74,6 +75,7 @@ function closeGallery() {
     progress = 0;
     $(".photogallery").addClass("hide");
     $("body").css("overflow", "visible");
+    $("html").css("overflow", "visible");
 }
 
 $(document).keyup(function (e) {

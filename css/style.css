@@ -535,6 +535,11 @@ ul li {
     color: black;
 }
 
+.industrial_ui {
+    background-image: url("../res/projects/industrial_ui_00.jpg");
+    background-position-x: 22.5%;
+}
+
 .t154_ws {
     background-image: url("../res/projects/t154_ws_00.jpg");
     background-position-x: 22.5%;
@@ -711,12 +716,14 @@ ul li {
     display: flex;
     align-items: center;
     height: 100%;
+    justify-content: center;
 }
 
 .photogallery-photo-frame {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
+    height: 90%;
 }
 
 .photogallery-back-arrow, .photogallery-next-arrow {
@@ -727,8 +734,9 @@ ul li {
 
 .photogallery-img {
     margin: 0px 50px;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .hide {
