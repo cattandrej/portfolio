@@ -979,6 +979,11 @@ strong {
 
 
 @media screen and (max-width: 480px) {
+
+    .cover-lang {
+        display: none;
+    }
+
     .cards {
         justify-content: center;
     }
@@ -1046,6 +1051,10 @@ strong {
 }
 
 @media print {
+
+    .cover-lang {
+        display: none;
+    }
 
     body {
         padding: 50px;
